@@ -1,350 +1,438 @@
 //colors
-$color_alto_approx: #ddd;
-$black_15: rgba(0, 0, 0, 0.15);
+$color-alto-approx: #ddd;
+$black-15: rgba(0, 0, 0, .15);
 $gallery: #efefef;
-$color_trout_approx: #4b545f;
+$color-trout-approx: #4b545f;
 $white: #fff;
-$black: black;
-$color_shuttle_gray_approx: #5f6975;
-$color_pale_sky_approx: #6b727c;
-$color_mid_gray_approx: #575f6a;
-$color_mercury_approx: #e3e3e3;
-$red: red;
+$black: #000;
+$color-shuttle-gray-approx: #5f6975;
+$color-pale-sky-approx: #6b727c;
+$color-mid-gray-approx: #575f6a;
+$color-mercury-approx: #e3e3e3;
+$red: #f00;
+
 //@extend-elements
 //original selectors
 //div#organisers-box, div#platinum-supporters-box, div#gold-supporters-box, div#silver-supporters-box
-%extend_1 {
-  margin: 0 0 1rem 0;
-  padding: 0.3rem;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 0 0.2rem $black_15;
+%box {
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 0.3rem;
+  border-radius: .3rem;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 .2rem $black-15;
+  margin: 0 0 1rem;
+  padding: .3rem;
 }
+
 div {
+
   &#mysite {
+    border-style: none;
     margin: 0 auto;
     padding: 0;
-    border-style: none;
   }
+
   &.menu {
-    margin: 0 auto 1rem auto;
-    padding: 0;
-    width: 100%;
     //Instead of the line below you could use @include box-sizing($bs)
     box-sizing: border-box;
     clear: both;
+    margin: 0 auto 1rem;
+    padding: 0;
+    width: 100%;
+
     ul {
+      background-color: $gallery;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: .5rem;
+      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+      box-shadow: 0 0 .4rem $black-15;
+      font-size: .8rem;
+      list-style: none;
       margin: 0;
       padding: 0;
-      font-size: 0.8rem;
-      background-color: $gallery;
-      //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-      box-shadow: 0 0 0.4rem $black_15;
-      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-      border-radius: 0.5rem;
-      list-style: none;
+
       &:after {
-        content: '';
         clear: both;
+        content: '';
         display: block;
       }
+
       li {
+        float: left;
         margin: 0;
         padding: 0;
-        float: left;
         position: relative;
+
         &:hover {
-          background-color: $color_trout_approx;
+          background-color: $color-trout-approx;
+
           > ul {
             display: block;
           }
+
           a {
             color: $white;
           }
         }
+
         a {
-          display: block;
-          padding: 0.2rem 0.5rem;
           color: $black;
+          display: block;
+          padding: .2rem .5rem;
           text-decoration: none;
         }
       }
+
       ul {
-        display: none;
-        background: $color_shuttle_gray_approx;
+        background: $color-shuttle-gray-approx;
         //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
         border-radius: 0;
+        display: none;
         padding: 0;
         position: absolute;
         top: 100%;
+
         li {
+          border-bottom: .1rem solid $color-mid-gray-approx;
+          border-top: .1rem solid $color-pale-sky-approx;
           float: none;
-          border-top: 0.1rem solid $color_pale_sky_approx;
-          border-bottom: 0.1rem solid $color_mid_gray_approx;
           position: relative;
+
           a {
-            padding: 0.5rem 1rem;
             color: $white;
+            padding: .5rem 1rem;
+
             &:hover {
-              background-color: $color_trout_approx;
+              background-color: $color-trout-approx;
             }
           }
         }
+
         ul {
-          position: absolute;
           left: 100%;
+          position: absolute;
           top: 0;
         }
       }
     }
   }
+
   &#breadcrumbs {
     margin-bottom: 2rem;
   }
+
   &#speakers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     //		align-content: flex-start;
   }
+
   &.speaker {
-    max-width: 25rem;
-    padding: 1rem;
-    border: 0.1rem solid $black;
+    border: .1rem solid $black;
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     flex-basis: 12rem;
     flex-grow: 1;
     flex-shrink: 0;
     margin: 0 1rem 1rem 0;
+    max-width: 25rem;
+    padding: 1rem;
   }
+
   &#organisers-box {
-    @extend %extend_1;
+    @extend %box;
   }
+
   &#platinum-supporters-box {
-    @extend %extend_1;
+    @extend %box;
+
     h2 {
-      font-size: 0.9rem;
-      margin: 0 0 1rem 0;
+      font-size: .9rem;
+      margin: 0 0 1rem;
     }
   }
+
   &#gold-supporters-box {
-    @extend %extend_1;
+    @extend %box;
+
     h2 {
-      font-size: 0.8rem;
-      margin: 0 0 1rem 0;
+      font-size: .8rem;
+      margin: 0 0 1rem;
     }
   }
+
   &#silver-supporters-box {
-    @extend %extend_1;
+    @extend %box;
     margin-bottom: 0;
+
     h2 {
-      font-size: 0.7rem;
-      margin: 0 0 1rem 0;
+      font-size: .7rem;
+      margin: 0 0 1rem;
     }
   }
+
   &#organisers {
     display: flex;
     flex-wrap: wrap;
   }
+
   &#platinum-supporters {
     display: flex;
     flex-wrap: wrap;
   }
+
   &#gold-supporters {
     display: flex;
     flex-wrap: wrap;
   }
+
   &#silver-supporters {
     display: flex;
     flex-wrap: wrap;
   }
+
   &.main-org {
     margin: 0 1rem 1rem 0;
   }
+
   &.platinum-supp {
     margin: 0 1rem 1rem 0;
   }
+
   &.gold-supp {
     margin: 0 1rem 1rem 0;
   }
+
   &.silver-supp {
     margin: 0 1rem 1rem 0;
   }
+
   &#register-button {
+    margin: 2rem auto;
     width: 10rem;
-    margin: 2rem auto 2rem auto;
   }
+
   &#location {
     margin: 2rem 0 1rem;
   }
+
   &#location-map {
     display: inline-block;
-    vertical-align: top;
-    text-align: left;
     margin: 0;
+    text-align: left;
+    vertical-align: top;
     width: 50%;
   }
+
   &#location-links {
     display: inline-block;
+    margin: 0;
     text-align: left;
     vertical-align: top;
-    margin: 0;
     width: 15rem;
   }
-  &#main-organisers-box h2 {
-    font-size: 1rem;
-  }
-  &#inffeld-photos figure {
-    margin: 1rem auto 2rem auto;
-    text-align: center;
-    width: 100%;
-    img {
-      padding: 1rem 0;
-      max-width: 100%;
-      max-height: 20rem;
+
+  &#main-organisers-box {
+    h2 {
+      font-size: 1rem;
     }
-    figcaption p {
+  }
+
+  &#inffeld-photos {
+    figure {
+      margin: 1rem auto 2rem;
       text-align: center;
-      text-indent: 0;
+      width: 100%;
+
+      img {
+        max-height: 20rem;
+        max-width: 100%;
+        padding: 1rem 0;
+      }
+
+      figcaption {
+        p {
+          text-align: center;
+          text-indent: 0;
+        }
+      }
     }
-  }
+    }
 }
+
 header {
-  margin: 1rem auto;
-  background-color: $color_alto_approx;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 0 0.4rem $black_15;
+  background-color: $color-alto-approx;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 0.5rem;
-  width: 100%;
+  border-radius: .5rem;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 .4rem $black-15;
   display: flex;
   justify-content: space-between;
+  margin: 1rem auto;
+  width: 100%;
+
   div {
+
     &#title {
       width: auto;
     }
+
     &#tagline {
-      font-size: 0.7rem;
+      font-size: .7rem;
     }
-    &#logo img {
-      width: 2.5rem;
-      display: block;
-      margin-right: 1rem;
+
+    &#logo {
+      img {
+        display: block;
+        margin-right: 1rem;
+        width: 2.5rem;
+      }
     }
-    &#uxg-logo img {
-      width: 2.5rem;
-      display: block;
-      margin-left: 1rem;
+
+    &#uxg-logo {
+      img {
+        display: block;
+        margin-left: 1rem;
+        width: 2.5rem;
+      }
     }
   }
+
   h1 {
     font-size: 2rem;
   }
 }
+
 footer {
-  font-size: 0.7rem;
-  margin: 2.5rem auto 1rem auto;
   background-color: $gallery;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 0 0.4rem $black_15;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 0.5rem;
+  border-radius: .5rem;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 .4rem $black-15;
+  font-size: .7rem;
+  margin: 2.5rem auto 1rem;
   text-align: center;
+
   span {
+
     &.valid-xhtml {
       display: inline-block;
-      padding: 0 0.5rem 0 0;
+      padding: 0 .5rem 0 0;
     }
+
     &.valid-css {
       display: inline-block;
-      padding: 0 0.5rem;
+      padding: 0 .5rem;
     }
+
     &.copyright {
       display: inline-block;
-      padding: 0 0.5rem;
+      padding: 0 .5rem;
     }
+
     &.impressum {
       display: inline-block;
-      padding: 0 0 0 0.5rem;
+      padding: 0 0 0 .5rem;
     }
   }
 }
+
 img {
+
   &.speaker-photo {
     display: block;
-    margin: 0 auto 1rem auto;
-    max-width: 100%;
+    margin: 0 auto 1rem;
     max-height: 10rem;
+    max-width: 100%;
   }
+
   &.org-logo {
-    width: 8rem;
     max-height: 3.5rem;
+    width: 8rem;
   }
+
   &.platinum-supp-logo {
-    width: 8rem;
     max-height: 3.5rem;
+    width: 8rem;
   }
+
   &.gold-supp-logo {
-    width: 5.8rem;
     max-height: 2.2rem;
+    width: 5.8rem;
   }
+
   &.silver-supp-logo {
-    width: 4.5rem;
     max-height: 2rem;
+    width: 4.5rem;
   }
+
   &#supp-logo-feri {
     max-height: 3rem;
   }
+
   &#map-i7 {
     display: block;
     margin-right: 1rem;
     min-width: 10rem;
   }
 }
+
 @media only all and(max-width: 40rem) {
   header {
     div {
       &#title {
         width: auto;
       }
+
       &#tagline {
-        font-size: 0.5rem;
+        font-size: .5rem;
       }
-      &#logo img {
-        width: 1.7rem;
-        display: block;
-        margin-right: 0.5rem;
+
+      &#logo{
+
+        img {
+          display: block;
+          margin-right: .5rem;
+          width: 1.7rem;
+        }
       }
-      &#uxg-logo img {
-        width: 1.7rem;
-        display: block;
-        margin-left: 0.5rem;
+
+      &#uxg-logo{
+
+        img {
+          display: block;
+          margin-left: .5rem;
+          width: 1.7rem;
+        }
       }
     }
+
     h1 {
       font-size: 1rem;
     }
   }
+
   div {
     &#container {
-      width: 100%;
       display: flex;
       flex-direction: column;
+      width: 100%;
     }
+
     &#supporters {
       width: 100%;
     }
   }
 }
+
 @media only all and(min-width: 40rem) and(max-width: 60rem) {
   div {
     &#container {
-      width: 100%;
       display: flex;
       justify-content: space-between;
+      width: 100%;
     }
+
     &#supporters {
       flex-basis: 9rem;
       flex-shrink: 0;
@@ -352,16 +440,19 @@ img {
     }
   }
 }
+
 @media only all and(min-width: 60rem) {
   div {
     &#mysite {
       max-width: 60rem;
     }
+
     &#container {
-      width: 100%;
       display: flex;
       justify-content: space-between;
+      width: 100%;
     }
+
     &#supporters {
       flex-basis: 19rem;
       flex-shrink: 0;
@@ -369,24 +460,26 @@ img {
     }
   }
 }
+
 .important {
   color: $red;
   font-weight: bold;
 }
-ul.breadcrumbs {
-  padding: 0 0.4rem;
-  margin: 0;
-  font-size: 0.7rem;
-  background-color: $color_mercury_approx;
-  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
-  box-shadow: 0 0 0.4rem $black_15;
+
+.breadcrumbs {
+  background-color: $color-mercury-approx;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-  border-radius: 0.5rem;
-  
+  border-radius: .5rem;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 .4rem $black-15;
+  font-size: .7rem;
+  margin: 0;
+  padding: 0 .4rem;
+
   li {
     display: inline;
-    padding: 0;
     margin: 0;
+    padding: 0;
 
     &:after {
       content: ' \2192';
