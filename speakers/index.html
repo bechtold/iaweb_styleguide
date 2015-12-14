@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<h1 class="page-heading">Speakers</h1>
+
+<div id="main">
+
+
+<div id="speakers">
+
+{% for speaker in site.data.speakers %}
+
+<div class="speaker">
+{% if speaker.photo %}
+<img class="speaker-photo" src="{{speaker.photo}}"/>
+{% endif %}
+<h2 class="speakername">{{speaker.firstname}} {{speaker.surname}}</h2>
+{% if speaker.affiliation %}<h3 class="affiliation">{{speaker.affiliation}}</h3>{% endif %}
+<p class="contact-info">
+{% if speaker.email %}<span class="email">Email: <a href="mailto:{{speaker.email}}">{{speaker.email}}</a></span>{% endif %}
+{% if speaker.web %}<span class="web">Web: <a href="{{speaker.web}}">{{speaker.web}}</a></span>{% endif %}
+{% if speaker.twitter %}<span class="twitter">Twitter: <a href="https://twitter.com/{{speaker.twitter}}">@{{speaker.twitter}}</a></span>{% endif %}
+</p>
+
+<div class="talk">
+<h2 class="talktitle">{{speaker.talktitle}}</h2>
+{% if speaker.abstract %}
+<h2 class="abstract">Abstract</h2>
+{{speaker.abstract}}
+{% endif %}
+</div>
+
+{% if speaker.biography %}
+<div class="biography">
+<h2 class="biography">Biography</h2>
+{{speaker.biography}}
+</div>
+{% endif %}
+
+</div> <!-- speaker -->
+{% endfor %}
+
+
+
+</div> <!-- speakers -->
+
+</div>
+

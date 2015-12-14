@@ -1,0 +1,62 @@
+- firstname: Eric
+  surname: Eggert
+  affiliation: W3C Web Accessibility Initiative
+  email: ee@w3.org
+  web:  http://yatil.net/
+  twitter: yatil
+  photo: /images/eric.jpg
+  talktitle: How to Improve Your Website’s Accessibility Without Going Crazy
+  abstract: |
+    <p>
+    In this talk, Eric will show how to improve the user experience
+    of websites, especially for people with disabilities. He will also
+    introduce the various W3C resources that help getting started with
+    accessibility, implementing them and describe why it makes sense for
+    everyone to let everyone have a good experience.
+    </p>
+  biography: |
+    <p>
+    Eric Eggert is currently working for W3C’s Web Accessibility
+    Initiative. He first got into contact with accessibility while
+    promoting standards-based web design in the early 2000s. In 2006, he
+    moved to Vienna, Austria where he continued to work freelance and also
+    got in touch with the accessibility community there. In 2011 he also
+    co-founded the small 2-person web design and consulting studio
+    “outline” in Essen, Germany.
+    </p>
+
+
+- firstname: Philipp
+  surname: Sackl
+  affiliation: Lead Designer Firefox, Mozilla
+  email: 
+  web:  http://philippsackl.com/
+  twitter: phlsa
+  photo: /images/philipp.jpg
+  talktitle: A Designer’s Guide to Empathy
+  abstract: |
+    <p>
+    We spend more time in our browsers than in bed and more
+    time with our smartphones than with our families. Computing and
+    digital user interfaces are now woven into the fabric of everyday life.
+    As designers, we are no longer just tampering with people's productivity,
+    we are handling the worlds most precious resource: attention.
+    </p>
+    <p>
+    This talk examines the challenges of building empathy with a global
+    audience. It takes a critical look at how design decisions shape our
+    everyday lives and at our role as mediators between the interests of
+    users and businesses.
+    </p>
+
+  biography: |
+    <p>
+    Philipp is the lead designer of Firefox at Mozilla. That means he
+    spend a lot of time thinking about browsers so that you don’t have
+    to. Prior to that, he’s been a co-founder of the design agency envis
+    precisely and an interaction designer at BMW. He enjoys good food,
+    good beer and bad jokes.
+    </p>
+
+
+

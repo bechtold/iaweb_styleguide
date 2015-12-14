@@ -1,0 +1,125 @@
+
+{% comment %}Site Navigation{% endcomment %}
+
+<p>Hello tobi has {{ 'tobi' | size }} letters!</p>
+
+
+<p>
+---------------------------------------------
+</p>
+
+<p>
+generate nav using data file
+</p>
+
+http://stackoverflow.com/questions/13266369/how-to-change-the-default-order-pages-in-jekyll
+
+
+
+make sitenav.yml file in the _data directory
+
+- label: Home
+  url: /
+- label: Speakers
+  url: /speakers/
+- label: Impressum
+  url: /impressum/
+
+etc
+
+then generate from there
+
+
+
+
+
+
+
+
+
+<p>
+---------------------------------------------
+</p>
+
+<p>
+but cannot do manual ordering of menu entries
+</p>
+
+
+
+<p>page.url = "{{page.url}}"</p>
+
+{% assign cp_parts = page.url | split: '/' %}
+<p>cp_parts = "{{cp_parts}}"</p>
+
+{% assign cp_parts_size = cp_parts | size %}
+<p>cp_parts_size = "{{cp_parts_size}}"</p>
+
+{% assign cp_base = page.url | replace: 'index.html' %}
+<p>cp_base = "{{cp_base}}"</p>
+
+
+
+{% for p in site.pages %}
+<p>p.url = "{{p.url}}"</p>
+{% endfor %}
+
+
+
+<nav id="sitenav">
+<div id="menu" class="menu">
+<ul>
+{% for p in site.pages %}
+  {% if p.url contains cp_base %}
+    {% assign p_url_parts = p.url | split: '/' %}
+    {% assign p_url_parts_size = p_url_parts | size %}
+    {% assign filnam = p_url_parts | last %}
+    {% if cp_parts_size == p_url_parts_size and filnam != 'index.html' %}
+      <li><a href="{{p.url}}">{{p.title}}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+</div>
+</nav>
+
+
+
+
+
+<!--
+
+{% assign url_parts = page.url | split: '/' %}
+{% assign url_parts_size = url_parts | size %}
+{% assign rm = url_parts | last %}
+{% assign base_url = page.url | replace: rm %}
+
+<nav id="sitenav">
+<div id="menu" class="menu">
+<ul>
+{% for node in site.pages %}
+  {% if node.url contains base_url %}
+    {% assign node_url_parts = node.url | split: '/' %}
+    {% assign node_url_parts_size = node_url_parts | size %}
+    {% assign filename = node_url_parts | last %}
+    {% if url_parts_size == node_url_parts_size and filename != 'index.html' %}
+      <li><a href="{{node.url}}">{{node.title}}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>
+</div>
+</nav>
+
+-->
+
+
+
+<!--
+<div id="breadcrumbs">
+<ul class="breadcrumbs">
+  <li>UX Day Graz 2013</li>
+</ul>
+</div>
+-->
+

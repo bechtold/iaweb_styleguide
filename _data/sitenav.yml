@@ -1,0 +1,18 @@
+- label: Home
+  path: /
+- label: Program
+  path: /program/
+- label: Speakers
+  path: /speakers/
+- label: Submissions
+  path: /submissions/
+- label: Registration
+  path: /registration/
+- label: Venue
+  path: /venue/
+- label: Support Us
+  path: /support/
+- label: Team
+  path: /team/
+- label: Impressum
+  path: /impressum/

@@ -1,0 +1,232 @@
+---
+layout: default
+---
+
+<div id="container">
+
+<div id="main">
+
+<h1 class="page-heading">UX Day Graz 2015</h1>
+
+
+<!--
+<p class="important">
+Tell us what you do! Submit a 5-minute
+<a href="/submissions/">Showcase Presentation</a>.
+</p>
+-->
+
+<p class="important">
+UX Day Graz 2016 will be held on Sat 12 Nov 2016 at
+FH Joanneum, Graz.
+</p>
+
+
+<p>
+UX Day Graz 2015 is over. Thanks to everyone who particpated.
+The slides from the talks are now available and are
+linked from the <a href="/program/">program</a> page.
+</p>
+
+<p>
+UX Day Graz 2015 is a community event for practitioners of user
+experience, interaction design, and usability. It is our local
+contribution towards <a href="http://worldusabilityday.org/">World
+Usability Day</a>.
+</p>
+
+<blockquote>
+UX Day Graz 2015<br/><br/>
+Sat 14 Nov 2015 09:30-17:00<br/>
+Lecture Theatre i7, Graz University of Technology,<br/>
+Inffeldgasse 25d, 1st floor, 8010 Graz<br/><br/>
+<a href="http://uxdaygraz.org/"><code>http://uxdaygraz.org/</code></a><br/>
+<a href="https://uxdaygraz2015.iicm.tugraz.at/"><code>https://uxdaygraz2015.iicm.tugraz.at/</code></a>
+</blockquote>
+
+<p>
+UX Day Graz 2015 is free to attend, but advance registration is
+required, and the number of places is limited. The event is a
+non-smoking event and the language of the event is English.
+</p>
+
+<p>
+Guest accounts for the university’s wifi will be available at
+registration. For users of twitter, we suggest using the hashtag
+<code>#uxg15</code> when refering to the event.
+</p>
+
+
+
+
+<h2>Previous UX Day Graz Events</h2>
+
+<p>
+Previously, UX Day Graz was held:
+</p>
+<ul>
+<li>UX Day Graz 2014, FH Joanneum<br/>
+<a href="http://uxday.at/">
+<code>http://uxday.at/</code></a>
+</li>
+
+<li>UX Day Graz 2013, Graz University of Technology<br/>
+<a href="https://uxdaygraz2013.iicm.tugraz.at/">
+<code>https://uxdaygraz2013.iicm.tugraz.at/</code></a>
+</li>
+</ul>
+
+<p>
+The domain <a href="http://uxdaygraz.org/">
+<code>http://uxdaygraz.org/</code></a> will always point to the
+current UX Day Graz web site.
+</p>
+
+
+
+<h2>UX Graz - The Graz UX Community</h2>
+
+<p>
+The <a href="https://uxgraz.iicm.tugraz.at/">UX Graz</a> community
+hold a <a href="https://uxgraz.iicm.tugraz.at/meetups">meetup</a>
+every 3 months or so.  Come along or join
+the <a href="https://uxgraz.iicm.tugraz.at/mailing-list">mailing
+list</a> to stay informed.
+</p>
+
+</div> <!-- main -->
+
+
+
+
+
+<div id="supporters">
+
+<div id="organisers-box">
+<h2>Organiser</h2>
+<div id="organisers">
+
+<div class="main-org">
+<a href="http://tugraz.at/" title="Graz University of Technology">
+<img id="org-logo-tugraz" src="logos/tugraz-logo.svg"
+alt="Graz University of Technology Logo" class="org-logo"/></a>
+</div>
+
+</div> <!-- organisers -->
+</div> <!-- organisers-box -->
+
+
+
+<div id="platinum-supporters-box">
+<h2>Platinum Supporters</h2>
+<div id="platinum-supporters">
+
+<div class="platinum-supp">
+<a href="http://fh-joanneum.at/" title="FH Joanneum">
+<img id="supp-logo-fhj" src="logos/fhj-logo.svg"
+alt="FH Joanneum Logo" class="platinum-supp-logo"/></a>
+</div>
+
+<div class="platinum-supp">
+<a href="http://youspi.com/" title="youspi">
+<img id="supp-logo-youspi" src="logos/youspi-logo.svg"
+alt="youspi Logo" class="platinum-supp-logo"/></a>
+</div>
+
+<div class="platinum-supp">
+<a href="http://pmone.com/" title="pmOne">
+<img id="supp-logo-pmone" src="logos/pmone-logo.svg"
+alt="pmOne Logo" class="platinum-supp-logo"/></a>
+</div>
+
+<div class="platinum-supp">
+<a href="http://adenso.at/" title="ADENSO">
+<img id="supp-logo-adenso" src="logos/adenso-logo.svg"
+alt="ADENSO Logo" class="platinum-supp-logo"/></a>
+</div>
+
+</div> <!-- platinum-supporters -->
+</div> <!-- platinum-supporters-box -->
+
+
+
+
+<div id="gold-supporters-box">
+<h2>Gold Supporters</h2>
+
+<div id="gold-supporters">
+
+<div class="gold-supp">
+<a href="http://dccs.at/" title="dccs">
+<img id="supp-logo-dccs" src="logos/dccs-logo.svg"
+alt="dccs Logo" class="gold-supp-logo"/></a>
+</div>
+
+<div class="gold-supp">
+<a href="http://infonova.com/" title="infonova">
+<img id="supp-logo-infonova" src="logos/infonova-logo.svg"
+alt="infonova Logo" class="gold-supp-logo"/></a>
+</div>
+
+<div class="gold-supp">
+<a href="http://avibit.com/" title="avibit">
+<img id="supp-logo-avibit" src="logos/avibit-logo.svg"
+alt="avibit Logo" class="gold-supp-logo"/></a>
+</div>
+
+<div class="gold-supp">
+<a href="http://topreal.at/" title="TopREAL">
+<img id="supp-logo-topreal" src="logos/topreal-logo.svg"
+alt="TopREAL Logo" class="gold-supp-logo"/></a>
+</div>
+
+</div> <!-- gold-supporters -->
+</div> <!-- gold-supporters-box -->
+
+
+
+
+<div id="silver-supporters-box">
+<h2>Silver Supporters</h2>
+
+<div id="silver-supporters">
+
+<div class="silver-supp">
+<a href="http://jipp.it/" title="jipp.it">
+<img id="supp-logo-jipp" src="logos/jipp-logo.svg"
+alt="jipp Logo" class="silver-supp-logo"/></a>
+</div>
+
+<div class="silver-supp">
+<a href="http://solvion.net/" title="solvion">
+<img id="supp-logo-solvion" src="logos/solvion-logo.svg"
+alt="solvion Logo" class="silver-supp-logo"/></a>
+</div>
+
+<div class="silver-supp">
+<a href="https://feri.um.si/" title="FERI, University of Maribor">
+<img id="supp-logo-feri" src="logos/feri-logo.svg"
+alt="FERI Logo" class="silver-supp-logo"/></a>
+</div>
+
+<div class="silver-supp">
+<a href="https://userbrain.net/" title="userbrain">
+<img id="supp-logo-userbrain" src="logos/userbrain-logo.svg"
+alt="userbrain Logo" class="silver-supp-logo"/></a>
+</div>
+
+</div> <!-- silver-supporters -->
+</div> <!-- silver-supporters-box -->
+
+
+
+
+
+
+
+
+</div> <!-- supporters -->
+
+
+</div> <!-- container -->
+
