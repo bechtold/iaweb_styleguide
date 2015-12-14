@@ -18,7 +18,10 @@
   "homepage": "https://github.com/bechtold/iaweb_styleguide#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-concurrent": "^2.1.0",
+    "grunt-contrib-watch": "^0.6.1",
     "grunt-jekyll": "^0.4.3",
-    "grunt-sass": "^1.1.0"
+    "grunt-sass": "^1.1.0",
+    "load-grunt-tasks": "^3.3.0"
   }
 }
