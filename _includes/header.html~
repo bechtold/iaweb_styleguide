@@ -1,0 +1,17 @@
+<header>
+<div id="logo">
+<a href="/"><img src="/logos/uxd2015-logo.svg"
+alt="UX Day Graz 2015 Logo" class="logo"/></a>
+</div>
+<div id="title">
+<h1>UX Day Graz 2015</h1>
+<div id="tagline">
+A community event for practitioners of user experience,
+interaction design, and usability!
+</div>
+</div>
+<div id="uxg-logo">
+<a href="https://uxgraz.iicm.tugraz.at/">
+<img src="/logos/uxg-logo.svg" alt="UX Graz Logo" class="logo"/></a>
+</div>
+</header>

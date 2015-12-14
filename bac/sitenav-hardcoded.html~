@@ -1,0 +1,29 @@
+{%comment%}Site Navigation{%endcomment%}
+
+<p>page.url = "{{page.url}}"</p>
+
+{% assign cp_parts = page.url | split: '/' %}
+<p>cp_parts = "{{cp_parts}}"</p>
+
+{% assign cp_parts_size = cp_parts | size %}
+<p>cp_parts_size = "{{cp_parts_size}}"</p>
+
+{% assign cp_base = page.url | replace: 'index.html' %}
+<p>cp_base = "{{cp_base}}"</p>
+
+
+<nav id="sitenav">
+<div id="menu" class="menu">
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/program/">Program</a></li>
+  <li><a href="/speakers/">Speakers</a></li>
+  <li><a href="/submissions/">Submissions</a></li>
+  <li><a href="/registration/">Registration</a></li>
+  <li><a href="/venue/">Venue</a></li>
+  <li><a href="/team/">Team</a></li>
+  <li><a href="/impressum/">Impressum</a></li>
+</ul>
+</div>
+</nav>
+

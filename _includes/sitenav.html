@@ -1,0 +1,15 @@
+{% assign cp_parts = page.url | split: '/' %}
+{% assign cp_parts_size = cp_parts | size %}
+{% assign cp_base = page.url | replace: 'index.html' %}
+{% assign items = site.data.sitenav %}
+
+<nav id="sitenav">
+<div id="menu" class="menu">
+<ul>
+{% for i in items %}
+{% if i.path == cp_base %}<li class="current">{% else %}<li>{% endif %}<a href="{{i.path}}">{{i.label}}</a></li>
+{% endfor %}
+</ul>
+</div>
+</nav>
+

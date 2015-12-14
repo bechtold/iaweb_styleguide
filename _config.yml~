@@ -1,0 +1,22 @@
+# Site settings, available as site.description, site.url, etc.
+title: UX Day Graz 2015
+email: kandrews@iicm.edu
+
+description: 
+  UX Day Graz 2015 is a community event for practitioners of
+  user experience, interaction design, and usability in and
+  around Graz, Austria.
+
+baseurl:
+
+url: "http://uxdaygraz2015.iicm.tugraz.at"
+
+
+highlighter: rouge
+
+encoding: UTF-8
+
+permalink: none
+
+exclude: [bac, */bac]
+
