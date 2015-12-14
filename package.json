@@ -1,0 +1,19 @@
+{
+  "name": "style_guide_project",
+  "version": "1.0.0",
+  "description": "## Needs to be installed",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bechtold/iaweb_styleguide.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bechtold/iaweb_styleguide/issues"
+  },
+  "homepage": "https://github.com/bechtold/iaweb_styleguide#readme"
+}
