@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/bechtold/iaweb_styleguide/issues"
   },
-  "homepage": "https://github.com/bechtold/iaweb_styleguide#readme"
+  "homepage": "https://github.com/bechtold/iaweb_styleguide#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
 }
