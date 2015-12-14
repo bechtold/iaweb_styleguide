@@ -1,0 +1,16 @@
+#########################
+## Sample Sass Lint File
+#########################
+# Linter Options
+options:
+  # Set the formatter to 'html'
+  formatter: stylish
+# File Options
+files:
+  include: 'scss/**/*.s+(a|c)ss'
+# Rule Configuration
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
