@@ -76,6 +76,14 @@ module.exports = function (grunt) {
       }
     },
     
+    // lint the sass files
+    sasslint: {
+        options: {
+            configFile: '.sass-lint.yml',
+        },
+        target: ['scss/*.scss']
+    }
+
   });
 
 
@@ -83,6 +91,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-sass-lint');
 
   // Default task(s).
   grunt.registerTask('default', ['concurrent']);
