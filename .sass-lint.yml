@@ -8,6 +8,10 @@ options:
 # File Options
 files:
   include: 'scss/**/*.s+(a|c)ss'
+  ignore:
+    - 'scss/reset.scss'
+    - 'scss/normalise.scss'
+    - 'scss/base.scss'
 # Rule Configuration
 rules:
   indentation:
