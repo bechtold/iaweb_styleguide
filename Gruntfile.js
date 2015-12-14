@@ -12,13 +12,13 @@ module.exports = function (grunt) {
       dist: { // Target
         options: { // Target options
           dest: '<%= dist %>',
-          config: '_config.yml,_config.build.yml'
+          config: '_config.yml'
         }
       },
       serve: { // Another target
         options: {
           serve: true,
-          dest: '.jekyll',
+          dest: '_site',
           drafts: true,
           future: true
         }
