@@ -59,11 +59,10 @@ module.exports = function (grunt) {
         files: ['{,*/}*', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
         //files: ['gruntfile.js']
         // runs the task `sass` whenever any watched file changes
-        tasks: ['sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
+        tasks: ['sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
       },
       options: {
-        // Sets livereload to true for livereload to work
-        // (livereload is not covered in this article)
+
         //        livereload: true,
         //        spawn: false
       }
@@ -101,6 +100,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // Style guide generation
     gulp: {
       'styleguide-generate': function() {
         var outputPath = 'styleguide';
@@ -125,6 +125,22 @@ module.exports = function (grunt) {
             .pipe(styleguide.applyStyles())
             .pipe(gulp.dest('styleguide'));
       }
+    },
+
+    // Sass globbing (necessary for libSass)
+    sass_globbing: {
+      sass: {
+        files: {
+          'scss/_base.scss': 'scss/base/**/*.scss',
+          'scss/_includes.scss': 'scss/includes/**/*.scss',
+          'scss/_partials.scss': 'scss/partials/**/*.scss',
+          'scss/_variables.scss': 'scss/variables/**/*.scss',
+        },
+        options: {
+          useSingleQuotes: false,
+          signature: '// Hello, World!'
+        }
+      }
     }
 
   });
@@ -137,8 +153,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass-lint');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-gulp');
+  grunt.loadNpmTasks('grunt-sass-globbing');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
+  grunt.registerTask('default', ['sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
 
 };

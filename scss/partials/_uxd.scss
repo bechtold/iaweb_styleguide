@@ -1,0 +1,202 @@
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //		align-content: flex-start;
+}
+
+.speaker {
+  border: .1rem solid $black;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: .5rem;
+  flex-basis: 12rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0 1rem 1rem 0;
+  max-width: 25rem;
+  padding: 1rem;
+}
+
+.organisers-box {
+  @extend %box;
+}
+
+// Headings
+//
+// These are our headings
+//
+// markup:
+// <h1 >title</h1> - used fot the title
+// <h2 >Heading 2</h2>
+//
+// Styleguide 1.2
+
+.platinum-supporters-box {
+  @extend %box;
+
+  h2 {
+    font-size: .9rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.gold-supporters-box {
+  @extend %box;
+
+  h2 {
+    font-size: .8rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.silver-supporters-box {
+  @extend %box;
+  margin-bottom: 0;
+
+  h2 {
+    font-size: .7rem;
+    margin: 0 0 1rem;
+  }
+}
+
+.organisers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.platinum-supporters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gold-supporters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.silver-supporters {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-org {
+  margin: 0 1rem 1rem 0;
+}
+
+.platinum-supp {
+  margin: 0 1rem 1rem 0;
+}
+
+.gold-supp {
+  margin: 0 1rem 1rem 0;
+}
+
+.silver-supp {
+  margin: 0 1rem 1rem 0;
+}
+
+.register-button {
+  margin: 2rem auto;
+  width: 10rem;
+}
+
+.location {
+  margin: 2rem 0 1rem;
+}
+
+.location-map {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  vertical-align: top;
+  width: 50%;
+}
+
+.location-links {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  vertical-align: top;
+  width: 15rem;
+}
+
+.main-organisers-box {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+
+img {
+
+  &.speaker-photo {
+    display: block;
+    margin: 0 auto 1rem;
+    max-height: 10rem;
+    max-width: 100%;
+  }
+
+  &.org-logo {
+    max-height: 3.5rem;
+    width: 8rem;
+  }
+
+  &.platinum-supp-logo {
+    max-height: 3.5rem;
+    width: 8rem;
+  }
+
+  &.gold-supp-logo {
+    max-height: 2.2rem;
+    width: 5.8rem;
+  }
+
+  &.silver-supp-logo {
+    max-height: 2rem;
+    width: 4.5rem;
+  }
+
+  &.supp-logo-feri {
+    max-height: 3rem;
+  }
+
+  &.map-i7 {
+    display: block;
+    margin-right: 1rem;
+    min-width: 10rem;
+  }
+}
+
+.important {
+  color: $red;
+  font-weight: bold;
+}
+
+.contact-info {
+  span {
+    display: block;
+  }
+}
+
+.talktitle {
+  &:before {
+    content: '\201C';
+  }
+
+  &:after {
+    content: '\201D';
+  }
+}
+
+.credit {
+  font-size: 60%;
+
+  &:before {
+    content: '[';
+  }
+
+  &:after {
+    content: ']';
+  }
+}

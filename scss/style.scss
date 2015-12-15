@@ -1,0 +1,14 @@
+// Colors and Typography
+//
+// This section describes base colors and typography
+//
+// Styleguide 1.0
+
+// Importing the partials.
+// Since using libSass doesn't support globbing a grunt tasks combines all files from the folders.
+// The order of the import is important.
+@import "base";
+@import "variables";
+@import "includes";
+@import "partials";
+

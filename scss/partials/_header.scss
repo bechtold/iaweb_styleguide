@@ -1,0 +1,76 @@
+// Header and Footer
+//
+// The header and footer are also included
+//
+// Styleguide 2.0
+
+// Logos
+//
+// We have two logos
+//
+// markup:
+// <div id="logo"> logo </div> - used for the right logo
+// <div id="logo"> uxg_logo </div> - used for the left logo
+//
+// Styleguide 2.1
+
+header {
+  background-color: $color-alto-approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: .5rem;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 .4rem $black-15;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto;
+  width: 100%;
+
+  .title {
+    width: auto;
+  }
+
+  .tagline {
+    font-size: .7rem;
+
+    @media only all and(max-width: 40rem) {
+      font-size: .5rem;
+    }
+  }
+
+  .logo {
+    img {
+      display: block;
+      margin-right: 1rem;
+      width: 2.5rem;
+
+      @media only all and(max-width: 40rem) {
+        display: block;
+        margin-right: .5rem;
+        width: 1.7rem;
+      }
+    }
+  }
+
+  .uxg-logo {
+    img {
+      display: block;
+      margin-left: 1rem;
+      width: 2.5rem;
+
+      @media only all and(max-width: 40rem) {
+        display: block;
+        margin-left: .5rem;
+        width: 1.7rem;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+
+    @media only all and(max-width: 40rem) {
+      font-size: 1rem;
+    }
+  }
+
+}

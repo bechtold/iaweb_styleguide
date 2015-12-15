@@ -24,6 +24,7 @@
     "grunt-gulp": "^0.1.0",
     "grunt-jekyll": "^0.4.3",
     "grunt-sass": "^1.1.0",
+    "grunt-sass-globbing": "^1.4.0",
     "grunt-sass-lint": "0.1.0-beta.4",
     "grunt-scss-lint": "^0.3.8",
     "gulp": "^3.9.0",

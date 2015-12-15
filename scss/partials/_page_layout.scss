@@ -1,0 +1,47 @@
+
+.mysite {
+  border-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  @media only all and(min-width: 60rem) {
+    max-width: 60rem;
+  }
+}
+
+.container {
+  @media only all and(max-width: 40rem) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  @media only all and(min-width: 40rem) and(max-width: 60rem) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media only all and(min-width: 60rem) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
+.supporters {
+  @media only all and(max-width: 40rem) {
+    width: 100%;
+  }
+  @media only all and(min-width: 40rem) and(max-width: 60rem) {
+    flex-basis: 9rem;
+    flex-shrink: 0;
+    margin-left: 2rem;
+  }
+  @media only all and(min-width: 60rem) {
+    flex-basis: 19rem;
+    flex-shrink: 0;
+    margin-left: 3rem;
+  }
+}

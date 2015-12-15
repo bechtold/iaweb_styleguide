@@ -1,0 +1,30 @@
+.breadcrumbswrapper {
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs {
+  background-color: $color-mercury-approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: .5rem;
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: 0 0 .4rem $black-15;
+  font-size: .7rem;
+  margin: 0;
+  padding: 0 .4rem;
+}
+
+.breadcrumb {
+  display: inline;
+  margin: 0;
+  padding: 0;
+
+  &:after {
+    content: ' \2192';
+  }
+
+  &:last-child {
+    &:after {
+      content: '';
+    }
+  }
+}
