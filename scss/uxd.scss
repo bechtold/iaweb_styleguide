@@ -1,5 +1,4 @@
-//colors
-// Colors and typography
+// Colors and Typography
 //
 // This section describes base colors and typography
 //
@@ -23,6 +22,7 @@
 // <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
 //
 // Styleguide 1.1
+
 
 $color-alto-approx: #ddd;
 $black-15: rgba(0, 0, 0, .15);
@@ -166,6 +166,16 @@ $red: #f00;
   @extend %box;
 }
 
+// Headings
+//
+// These are our headings
+//
+// markup:
+// <h1 >title</h1> - used fot the title
+// <h2 >Heading 2</h2>
+//
+// Styleguide 1.2
+
 .platinum-supporters-box {
   @extend %box;
 
@@ -280,6 +290,22 @@ figure {
   }
 }
 
+// Header and Footer
+//
+// The header and footer are also included
+//
+// Styleguide 2.0
+
+// Logos
+//
+// We have two logos 
+//
+// markup:
+// <div id="logo"> logo </div> - used for the right logo
+// <div id="logo"> uxg_logo </div> - used for the left logo
+//
+// Styleguide 2.1
+
 header {
   background-color: $color-alto-approx;
   //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
@@ -319,6 +345,16 @@ header {
     font-size: 2rem;
   }
 }
+
+// Footer Information
+//
+// Some links to the HTML and CSS validators
+//
+// markup:
+// <a href="https://validator.w3.org/check/referer"> Polyglot XHTML5 </a> - used to provide a link to XHTML5 validator
+// <a href="https://jigsaw.w3.org/css-validator/check/referer"> CSS3 </a> - used to provide a link to CSS3 validator
+//
+// Styleguide 2.2
 
 footer {
   background-color: $gallery;
