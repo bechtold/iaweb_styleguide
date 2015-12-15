@@ -54,7 +54,7 @@ $red: #f00;
   padding: 0;
 }
 
-.menu {
+nav {
   //Instead of the line below you could use @include box-sizing($bs)
   box-sizing: border-box;
   clear: both;
@@ -79,64 +79,68 @@ $red: #f00;
       display: block;
     }
 
-    li {
-      float: left;
-      margin: 0;
-      padding: 0;
-      position: relative;
+    // TODO: not used atm so ignored for now. Should be generalized and specificity should be lower
+    //ul {
+    //  background: $color-shuttle-gray-approx;
+    //  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    //  border-radius: 0;
+    //  display: none;
+    //  padding: 0;
+    //  position: absolute;
+    //  top: 100%;
+    //
+    //  li {
+    //    border-bottom: .1rem solid $color-mid-gray-approx;
+    //    border-top: .1rem solid $color-pale-sky-approx;
+    //    float: none;
+    //    position: relative;
+    //
+    //    a {
+    //      color: $white;
+    //      padding: .5rem 1rem;
+    //
+    //      &:hover {
+    //        background-color: $color-trout-approx;
+    //      }
+    //    }
+    //  }
+    //
+    //  ul {
+    //    left: 100%;
+    //    position: absolute;
+    //    top: 0;
+    //  }
+    //}
+  }
 
-      &:hover {
-        background-color: $color-trout-approx;
+  li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
 
-        > ul {
-          display: block;
-        }
+    &:hover {
+      background-color: $color-trout-approx;
 
-        a {
-          color: $white;
-        }
-      }
 
-      a {
-        color: $black;
-        display: block;
-        padding: .2rem .5rem;
-        text-decoration: none;
-      }
-    }
-
-    ul {
-      background: $color-shuttle-gray-approx;
-      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-      border-radius: 0;
-      display: none;
-      padding: 0;
-      position: absolute;
-      top: 100%;
-
-      li {
-        border-bottom: .1rem solid $color-mid-gray-approx;
-        border-top: .1rem solid $color-pale-sky-approx;
-        float: none;
-        position: relative;
-
-        a {
-          color: $white;
-          padding: .5rem 1rem;
-
-          &:hover {
-            background-color: $color-trout-approx;
-          }
-        }
-      }
-
-      ul {
-        left: 100%;
-        position: absolute;
-        top: 0;
-      }
+      // TODO: not used atm so ignored for now. Should be generalized and specificity should be lower
+      //> ul {
+      //  display: block;
+      //}
     }
   }
+
+  a {
+    color: $black;
+    display: block;
+    padding: .2rem .5rem;
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
 }
 
 .breadcrumbswrapper {

@@ -4,12 +4,12 @@
 {% assign items = site.data.sitenav %}
 
 <nav id="sitenav">
-<div id="menu" class="menu">
+<!--<div id="menu" class="menu">-->
 <ul>
 {% for i in items %}
 {% if i.path == cp_base %}<li class="current">{% else %}<li>{% endif %}<a href="{{i.path}}">{{i.label}}</a></li>
 {% endfor %}
 </ul>
-</div>
+<!--</div>-->
 </nav>
 

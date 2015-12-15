@@ -9,13 +9,13 @@
   margin: 0 auto;
   padding: 0; }
 
-.menu {
+nav {
   box-sizing: border-box;
   clear: both;
   margin: 0 auto 1rem;
   padding: 0;
   width: 100%; }
-  .menu ul {
+  nav ul {
     background-color: #efefef;
     border-radius: .5rem;
     box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.15);
@@ -23,47 +23,24 @@
     list-style: none;
     margin: 0;
     padding: 0; }
-    .menu ul:after {
+    nav ul:after {
       clear: both;
       content: '';
       display: block; }
-    .menu ul li {
-      float: left;
-      margin: 0;
-      padding: 0;
-      position: relative; }
-      .menu ul li:hover {
-        background-color: #4b545f; }
-        .menu ul li:hover > ul {
-          display: block; }
-        .menu ul li:hover a {
-          color: #fff; }
-      .menu ul li a {
-        color: #000;
-        display: block;
-        padding: .2rem .5rem;
-        text-decoration: none; }
-    .menu ul ul {
-      background: #5f6975;
-      border-radius: 0;
-      display: none;
-      padding: 0;
-      position: absolute;
-      top: 100%; }
-      .menu ul ul li {
-        border-bottom: 0.1rem solid #575f6a;
-        border-top: 0.1rem solid #6b727c;
-        float: none;
-        position: relative; }
-        .menu ul ul li a {
-          color: #fff;
-          padding: .5rem 1rem; }
-          .menu ul ul li a:hover {
-            background-color: #4b545f; }
-      .menu ul ul ul {
-        left: 100%;
-        position: absolute;
-        top: 0; }
+  nav li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative; }
+    nav li:hover {
+      background-color: #4b545f; }
+  nav a {
+    color: #000;
+    display: block;
+    padding: .2rem .5rem;
+    text-decoration: none; }
+    nav a:hover {
+      color: #fff; }
 
 .breadcrumbswrapper {
   margin-bottom: 2rem; }
