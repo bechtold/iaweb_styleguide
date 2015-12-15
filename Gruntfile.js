@@ -55,7 +55,7 @@ module.exports = function (grunt) {
         // If you want to watch all scss files instead, use the "**/*" globbing pattern
         files: ['scss/{,*/}*.{scss,sass}'],
         // runs the task `sass` whenever any watched file changes 
-        tasks: ['sass']
+        tasks: ['sass', 'jekyll:dist']
       },
       options: {
         // Sets livereload to true for livereload to work 
@@ -69,7 +69,8 @@ module.exports = function (grunt) {
     concurrent: {
       serve: [
                 'watch',
-                'jekyll:serve'
+                //'jekyll:serve'
+                'browserSync'
             ],
       options: {
         logConcurrentOutput: true
@@ -82,6 +83,18 @@ module.exports = function (grunt) {
             configFile: '.sass-lint.yml',
         },
         target: ['scss/*.scss']
+    },
+
+    // Browsersync
+    browserSync: {
+      bsFiles: {
+        src : '_site/css/*.css'
+      },
+      options: {
+        server: {
+          baseDir: "./_site/"
+        }
+      }
     }
 
   });
@@ -92,6 +105,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-sass-lint');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
   // Default task(s).
   grunt.registerTask('default', ['concurrent']);
