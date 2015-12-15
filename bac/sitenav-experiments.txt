@@ -118,7 +118,7 @@ but cannot do manual ordering of menu entries
 <!--
 <div class="breadcrumbswrapper">
 <ul class="breadcrumbs">
-  <li>UX Day Graz 2013</li>
+  <li class="breadcrumb">UX Day Graz 2013</li>
 </ul>
 </div>
 -->

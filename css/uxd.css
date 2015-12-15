@@ -1,21 +1,21 @@
-div.organisers-box, div.platinum-supporters-box, div.gold-supporters-box, div.silver-supporters-box {
+.organisers-box, .platinum-supporters-box, .gold-supporters-box, .silver-supporters-box {
   border-radius: .3rem;
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.15);
   margin: 0 0 1rem;
   padding: .3rem; }
 
-div.mysite {
+.mysite {
   border-style: none;
   margin: 0 auto;
   padding: 0; }
 
-div.menu {
+.menu {
   box-sizing: border-box;
   clear: both;
   margin: 0 auto 1rem;
   padding: 0;
   width: 100%; }
-  div.menu ul {
+  .menu ul {
     background-color: #efefef;
     border-radius: .5rem;
     box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.15);
@@ -23,57 +23,57 @@ div.menu {
     list-style: none;
     margin: 0;
     padding: 0; }
-    div.menu ul:after {
+    .menu ul:after {
       clear: both;
       content: '';
       display: block; }
-    div.menu ul li {
+    .menu ul li {
       float: left;
       margin: 0;
       padding: 0;
       position: relative; }
-      div.menu ul li:hover {
+      .menu ul li:hover {
         background-color: #4b545f; }
-        div.menu ul li:hover > ul {
+        .menu ul li:hover > ul {
           display: block; }
-        div.menu ul li:hover a {
+        .menu ul li:hover a {
           color: #fff; }
-      div.menu ul li a {
+      .menu ul li a {
         color: #000;
         display: block;
         padding: .2rem .5rem;
         text-decoration: none; }
-    div.menu ul ul {
+    .menu ul ul {
       background: #5f6975;
       border-radius: 0;
       display: none;
       padding: 0;
       position: absolute;
       top: 100%; }
-      div.menu ul ul li {
+      .menu ul ul li {
         border-bottom: 0.1rem solid #575f6a;
         border-top: 0.1rem solid #6b727c;
         float: none;
         position: relative; }
-        div.menu ul ul li a {
+        .menu ul ul li a {
           color: #fff;
           padding: .5rem 1rem; }
-          div.menu ul ul li a:hover {
+          .menu ul ul li a:hover {
             background-color: #4b545f; }
-      div.menu ul ul ul {
+      .menu ul ul ul {
         left: 100%;
         position: absolute;
         top: 0; }
 
-div.breadcrumbswrapper {
+.breadcrumbswrapper {
   margin-bottom: 2rem; }
 
-div.speakers {
+.speakers {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
-div.speaker {
+.speaker {
   border: 0.1rem solid #000;
   border-radius: .5rem;
   flex-basis: 12rem;
@@ -83,81 +83,81 @@ div.speaker {
   max-width: 25rem;
   padding: 1rem; }
 
-div.platinum-supporters-box h2 {
+.platinum-supporters-box h2 {
   font-size: .9rem;
   margin: 0 0 1rem; }
 
-div.gold-supporters-box h2 {
+.gold-supporters-box h2 {
   font-size: .8rem;
   margin: 0 0 1rem; }
 
-div.silver-supporters-box {
+.silver-supporters-box {
   margin-bottom: 0; }
-  div.silver-supporters-box h2 {
+  .silver-supporters-box h2 {
     font-size: .7rem;
     margin: 0 0 1rem; }
 
-div.organisers {
+.organisers {
   display: flex;
   flex-wrap: wrap; }
 
-div.platinum-supporters {
+.platinum-supporters {
   display: flex;
   flex-wrap: wrap; }
 
-div.gold-supporters {
+.gold-supporters {
   display: flex;
   flex-wrap: wrap; }
 
-div.silver-supporters {
+.silver-supporters {
   display: flex;
   flex-wrap: wrap; }
 
-div.main-org {
+.main-org {
   margin: 0 1rem 1rem 0; }
 
-div.platinum-supp {
+.platinum-supp {
   margin: 0 1rem 1rem 0; }
 
-div.gold-supp {
+.gold-supp {
   margin: 0 1rem 1rem 0; }
 
-div.silver-supp {
+.silver-supp {
   margin: 0 1rem 1rem 0; }
 
-div.register-button {
+.register-button {
   margin: 2rem auto;
   width: 10rem; }
 
-div.location {
+.location {
   margin: 2rem 0 1rem; }
 
-div.location-map {
+.location-map {
   display: inline-block;
   margin: 0;
   text-align: left;
   vertical-align: top;
   width: 50%; }
 
-div.location-links {
+.location-links {
   display: inline-block;
   margin: 0;
   text-align: left;
   vertical-align: top;
   width: 15rem; }
 
-div.main-organisers-box h2 {
+.main-organisers-box h2 {
   font-size: 1rem; }
 
-div.inffeld-photos figure {
+figure {
   margin: 1rem auto 2rem;
   text-align: center;
   width: 100%; }
-  div.inffeld-photos figure img {
+  figure img {
     max-height: 20rem;
     max-width: 100%;
     padding: 1rem 0; }
-  div.inffeld-photos figure figcaption p {
+  figure figcaption p {
     text-align: center;
     text-indent: 0; }
 
@@ -169,15 +169,15 @@ header {
   justify-content: space-between;
   margin: 1rem auto;
   width: 100%; }
-  header div.title {
+  header .title {
     width: auto; }
-  header div.tagline {
+  header .tagline {
     font-size: .7rem; }
-  header div.logo img {
+  header .logo img {
     display: block;
     margin-right: 1rem;
     width: 2.5rem; }
-  header div.uxg-logo img {
+  header .uxg-logo img {
     display: block;
     margin-left: 1rem;
     width: 2.5rem; }
@@ -235,15 +235,15 @@ img.map-i7 {
   min-width: 10rem; }
 
 @media only all and (max-width: 40rem) {
-  header div.title {
+  header .title {
     width: auto; }
-  header div.tagline {
+  header .tagline {
     font-size: .5rem; }
-  header div.logo img {
+  header .logo img {
     display: block;
     margin-right: .5rem;
     width: 1.7rem; }
-  header div.uxg-logo img {
+  header .uxg-logo img {
     display: block;
     margin-left: .5rem;
     width: 1.7rem; }
@@ -289,14 +289,15 @@ img.map-i7 {
   font-size: .7rem;
   margin: 0;
   padding: 0 .4rem; }
-  .breadcrumbs li {
-    display: inline;
-    margin: 0;
-    padding: 0; }
-    .breadcrumbs li:after {
-      content: ' \2192'; }
-    .breadcrumbs li:last-child:after {
-      content: ''; }
+
+.breadcrumb {
+  display: inline;
+  margin: 0;
+  padding: 0; }
+  .breadcrumb:after {
+    content: ' \2192'; }
+  .breadcrumb:last-child:after {
+    content: ''; }
 
 .contact-info span {
   display: block; }
