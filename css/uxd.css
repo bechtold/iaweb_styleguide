@@ -8,6 +8,9 @@
   border-style: none;
   margin: 0 auto;
   padding: 0; }
+  @media only all and (min-width: 60rem) {
+    .mysite {
+      max-width: 60rem; } }
 
 nav {
   box-sizing: border-box;
@@ -150,16 +153,32 @@ header {
     width: auto; }
   header .tagline {
     font-size: .7rem; }
+    @media only all and (max-width: 40rem) {
+      header .tagline {
+        font-size: .5rem; } }
   header .logo img {
     display: block;
     margin-right: 1rem;
     width: 2.5rem; }
+    @media only all and (max-width: 40rem) {
+      header .logo img {
+        display: block;
+        margin-right: .5rem;
+        width: 1.7rem; } }
   header .uxg-logo img {
     display: block;
     margin-left: 1rem;
     width: 2.5rem; }
+    @media only all and (max-width: 40rem) {
+      header .uxg-logo img {
+        display: block;
+        margin-left: .5rem;
+        width: 1.7rem; } }
   header h1 {
     font-size: 2rem; }
+    @media only all and (max-width: 40rem) {
+      header h1 {
+        font-size: 1rem; } }
 
 footer {
   background-color: #efefef;
@@ -212,45 +231,35 @@ img.map-i7 {
   min-width: 10rem; }
 
 @media only all and (max-width: 40rem) {
-  header .title {
-    width: auto; }
-  header .tagline {
-    font-size: .5rem; }
-  header .logo img {
-    display: block;
-    margin-right: .5rem;
-    width: 1.7rem; }
-  header .uxg-logo img {
-    display: block;
-    margin-left: .5rem;
-    width: 1.7rem; }
-  header h1 {
-    font-size: 1rem; }
-  div.container {
+  .container {
     display: flex;
     flex-direction: column;
-    width: 100%; }
-  div.supporters {
     width: 100%; } }
 
 @media only all and (min-width: 40rem) and (max-width: 60rem) {
-  div.container {
+  .container {
     display: flex;
     justify-content: space-between;
-    width: 100%; }
-  div.supporters {
+    width: 100%; } }
+
+@media only all and (min-width: 60rem) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; } }
+
+@media only all and (max-width: 40rem) {
+  .supporters {
+    width: 100%; } }
+
+@media only all and (min-width: 40rem) and (max-width: 60rem) {
+  .supporters {
     flex-basis: 9rem;
     flex-shrink: 0;
     margin-left: 2rem; } }
 
 @media only all and (min-width: 60rem) {
-  div.mysite {
-    max-width: 60rem; }
-  div.container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; }
-  div.supporters {
+  .supporters {
     flex-basis: 19rem;
     flex-shrink: 0;
     margin-left: 3rem; } }

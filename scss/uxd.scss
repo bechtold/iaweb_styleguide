@@ -23,7 +23,6 @@
 //
 // Styleguide 1.1
 
-
 $color-alto-approx: #ddd;
 $black-15: rgba(0, 0, 0, .15);
 $gallery: #efefef;
@@ -52,6 +51,10 @@ $red: #f00;
   border-style: none;
   margin: 0 auto;
   padding: 0;
+
+  @media only all and(min-width: 60rem) {
+    max-width: 60rem;
+  }
 }
 
 nav {
@@ -121,7 +124,6 @@ nav {
 
     &:hover {
       background-color: $color-trout-approx;
-
 
       // TODO: not used atm so ignored for now. Should be generalized and specificity should be lower
       //> ul {
@@ -327,6 +329,10 @@ header {
 
   .tagline {
     font-size: .7rem;
+    
+    @media only all and(max-width: 40rem) {
+      font-size: .5rem;
+    }
   }
 
   .logo {
@@ -334,6 +340,12 @@ header {
       display: block;
       margin-right: 1rem;
       width: 2.5rem;
+
+      @media only all and(max-width: 40rem) {
+        display: block;
+        margin-right: .5rem;
+        width: 1.7rem;
+      }
     }
   }
 
@@ -342,12 +354,23 @@ header {
       display: block;
       margin-left: 1rem;
       width: 2.5rem;
+
+      @media only all and(max-width: 40rem) {
+        display: block;
+        margin-left: .5rem;
+        width: 1.7rem;
+      }
     }
   }
 
   h1 {
     font-size: 2rem;
+
+    @media only all and(max-width: 40rem) {
+      font-size: 1rem;
+    }
   }
+
 }
 
 // Footer Information
@@ -434,85 +457,39 @@ img {
   }
 }
 
-@media only all and(max-width: 40rem) {
-  header {
-    .title {
-      width: auto;
-    }
-
-    .tagline {
-      font-size: .5rem;
-    }
-
-    .logo {
-
-      img {
-        display: block;
-        margin-right: .5rem;
-        width: 1.7rem;
-      }
-    }
-
-    .uxg-logo {
-
-      img {
-        display: block;
-        margin-left: .5rem;
-        width: 1.7rem;
-      }
-    }
-
-    h1 {
-      font-size: 1rem;
-    }
+.container {
+  @media only all and(max-width: 40rem) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
 
-  div {
-    &.container {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
+  @media only all and(min-width: 40rem) and(max-width: 60rem) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-    &.supporters {
-      width: 100%;
-    }
+  @media only all and(min-width: 60rem) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
-@media only all and(min-width: 40rem) and(max-width: 60rem) {
-  div {
-    &.container {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    &.supporters {
-      flex-basis: 9rem;
-      flex-shrink: 0;
-      margin-left: 2rem;
-    }
+.supporters {
+  @media only all and(max-width: 40rem) {
+    width: 100%;
   }
-}
-
-@media only all and(min-width: 60rem) {
-  div {
-    &.mysite {
-      max-width: 60rem;
-    }
-
-    &.container {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    &.supporters {
-      flex-basis: 19rem;
-      flex-shrink: 0;
-      margin-left: 3rem;
-    }
+  @media only all and(min-width: 40rem) and(max-width: 60rem) {
+    flex-basis: 9rem;
+    flex-shrink: 0;
+    margin-left: 2rem;
+  }
+  @media only all and(min-width: 60rem) {
+    flex-basis: 19rem;
+    flex-shrink: 0;
+    margin-left: 3rem;
   }
 }
 
