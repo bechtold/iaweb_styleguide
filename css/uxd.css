@@ -1,10 +1,10 @@
-div#organisers-box, div#platinum-supporters-box, div#gold-supporters-box, div#silver-supporters-box {
+div.organisers-box, div.platinum-supporters-box, div.gold-supporters-box, div.silver-supporters-box {
   border-radius: .3rem;
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.15);
   margin: 0 0 1rem;
   padding: .3rem; }
 
-div#mysite {
+div.mysite {
   border-style: none;
   margin: 0 auto;
   padding: 0; }
@@ -65,10 +65,10 @@ div.menu {
         position: absolute;
         top: 0; }
 
-div#breadcrumbs {
+div.breadcrumbswrapper {
   margin-bottom: 2rem; }
 
-div#speakers {
+div.speakers {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
@@ -83,33 +83,33 @@ div.speaker {
   max-width: 25rem;
   padding: 1rem; }
 
-div#platinum-supporters-box h2 {
+div.platinum-supporters-box h2 {
   font-size: .9rem;
   margin: 0 0 1rem; }
 
-div#gold-supporters-box h2 {
+div.gold-supporters-box h2 {
   font-size: .8rem;
   margin: 0 0 1rem; }
 
-div#silver-supporters-box {
+div.silver-supporters-box {
   margin-bottom: 0; }
-  div#silver-supporters-box h2 {
+  div.silver-supporters-box h2 {
     font-size: .7rem;
     margin: 0 0 1rem; }
 
-div#organisers {
+div.organisers {
   display: flex;
   flex-wrap: wrap; }
 
-div#platinum-supporters {
+div.platinum-supporters {
   display: flex;
   flex-wrap: wrap; }
 
-div#gold-supporters {
+div.gold-supporters {
   display: flex;
   flex-wrap: wrap; }
 
-div#silver-supporters {
+div.silver-supporters {
   display: flex;
   flex-wrap: wrap; }
 
@@ -125,21 +125,21 @@ div.gold-supp {
 div.silver-supp {
   margin: 0 1rem 1rem 0; }
 
-div#register-button {
+div.register-button {
   margin: 2rem auto;
   width: 10rem; }
 
-div#location {
+div.location {
   margin: 2rem 0 1rem; }
 
-div#location-map {
+div.location-map {
   display: inline-block;
   margin: 0;
   text-align: left;
   vertical-align: top;
   width: 50%; }
 
-div#location-links {
+div.location-links {
   display: inline-block;
   margin: 0;
   text-align: left;
@@ -169,15 +169,15 @@ header {
   justify-content: space-between;
   margin: 1rem auto;
   width: 100%; }
-  header div#title {
+  header div.title {
     width: auto; }
-  header div#tagline {
+  header div.tagline {
     font-size: .7rem; }
-  header div#logo img {
+  header div.logo img {
     display: block;
     margin-right: 1rem;
     width: 2.5rem; }
-  header div#uxg-logo img {
+  header div.uxg-logo img {
     display: block;
     margin-left: 1rem;
     width: 2.5rem; }
@@ -229,21 +229,21 @@ img.silver-supp-logo {
 img#supp-logo-feri {
   max-height: 3rem; }
 
-img#map-i7 {
+img.map-i7 {
   display: block;
   margin-right: 1rem;
   min-width: 10rem; }
 
 @media only all and (max-width: 40rem) {
-  header div#title {
+  header div.title {
     width: auto; }
-  header div#tagline {
+  header div.tagline {
     font-size: .5rem; }
-  header div#logo img {
+  header div.logo img {
     display: block;
     margin-right: .5rem;
     width: 1.7rem; }
-  header div#uxg-logo img {
+  header div.uxg-logo img {
     display: block;
     margin-left: .5rem;
     width: 1.7rem; }
@@ -267,7 +267,7 @@ img#map-i7 {
     margin-left: 2rem; } }
 
 @media only all and (min-width: 60rem) {
-  div#mysite {
+  div.mysite {
     max-width: 60rem; }
   div#container {
     display: flex;

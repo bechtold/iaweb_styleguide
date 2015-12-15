@@ -1,4 +1,29 @@
 //colors
+// Colors and typography
+//
+// This section describes base colors and typography
+//
+// Styleguide 1.0
+
+// Main colors
+//
+// $color-alto-approx - header background-color
+// $black-15 - Sused for the box-shadow
+// $gallery - ul background-color
+// $color-trout-approx - hovers background-color
+// $white - Used for a color
+// $black - used for the borders
+// $color-shuttle-gray-approx - used for the background
+// $color-pale-sky-approx - used for the border-top
+// $color-mid-gray-approx - used for the border-bottom
+// $color-mercury-approx - used for background-color
+// $red - used for the color
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1
+
 $color-alto-approx: #ddd;
 $black-15: rgba(0, 0, 0, .15);
 $gallery: #efefef;
@@ -25,7 +50,7 @@ $red: #f00;
 
 div {
 
-  &#mysite {
+  &.mysite {
     border-style: none;
     margin: 0 auto;
     padding: 0;
@@ -116,11 +141,11 @@ div {
     }
   }
 
-  &#breadcrumbs {
+  &.breadcrumbswrapper {
     margin-bottom: 2rem;
   }
 
-  &#speakers {
+  &.speakers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -139,11 +164,11 @@ div {
     padding: 1rem;
   }
 
-  &#organisers-box {
+  &.organisers-box {
     @extend %box;
   }
 
-  &#platinum-supporters-box {
+  &.platinum-supporters-box {
     @extend %box;
 
     h2 {
@@ -152,7 +177,7 @@ div {
     }
   }
 
-  &#gold-supporters-box {
+  &.gold-supporters-box {
     @extend %box;
 
     h2 {
@@ -161,7 +186,7 @@ div {
     }
   }
 
-  &#silver-supporters-box {
+  &.silver-supporters-box {
     @extend %box;
     margin-bottom: 0;
 
@@ -171,22 +196,22 @@ div {
     }
   }
 
-  &#organisers {
+  &.organisers {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#platinum-supporters {
+  &.platinum-supporters {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#gold-supporters {
+  &.gold-supporters {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#silver-supporters {
+  &.silver-supporters {
     display: flex;
     flex-wrap: wrap;
   }
@@ -207,16 +232,16 @@ div {
     margin: 0 1rem 1rem 0;
   }
 
-  &#register-button {
+  &.register-button {
     margin: 2rem auto;
     width: 10rem;
   }
 
-  &#location {
+  &.location {
     margin: 2rem 0 1rem;
   }
 
-  &#location-map {
+  &.location-map {
     display: inline-block;
     margin: 0;
     text-align: left;
@@ -224,7 +249,7 @@ div {
     width: 50%;
   }
 
-  &#location-links {
+  &.location-links {
     display: inline-block;
     margin: 0;
     text-align: left;
@@ -273,15 +298,15 @@ header {
 
   div {
 
-    &#title {
+    &.title {
       width: auto;
     }
 
-    &#tagline {
+    &.tagline {
       font-size: .7rem;
     }
 
-    &#logo {
+    &.logo {
       img {
         display: block;
         margin-right: 1rem;
@@ -289,7 +314,7 @@ header {
       }
     }
 
-    &#uxg-logo {
+    &.uxg-logo {
       img {
         display: block;
         margin-left: 1rem;
@@ -370,7 +395,7 @@ img {
     max-height: 3rem;
   }
 
-  &#map-i7 {
+  &.map-i7 {
     display: block;
     margin-right: 1rem;
     min-width: 10rem;
@@ -380,15 +405,15 @@ img {
 @media only all and(max-width: 40rem) {
   header {
     div {
-      &#title {
+      &.title {
         width: auto;
       }
 
-      &#tagline {
+      &.tagline {
         font-size: .5rem;
       }
 
-      &#logo{
+      &.logo{
 
         img {
           display: block;
@@ -397,7 +422,7 @@ img {
         }
       }
 
-      &#uxg-logo{
+      &.uxg-logo{
 
         img {
           display: block;
@@ -443,7 +468,7 @@ img {
 
 @media only all and(min-width: 60rem) {
   div {
-    &#mysite {
+    &.mysite {
       max-width: 60rem;
     }
 
