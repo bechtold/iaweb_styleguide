@@ -145,7 +145,7 @@ div {
     margin-bottom: 2rem;
   }
 
-  &#speakers {
+  &.speakers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

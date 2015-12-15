@@ -68,7 +68,7 @@ div.menu {
 div.breadcrumbswrapper {
   margin-bottom: 2rem; }
 
-div#speakers {
+div.speakers {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
