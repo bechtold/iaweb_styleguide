@@ -106,9 +106,15 @@ module.exports = function (grunt) {
         return gulp.src(['scss/*.scss'])
             .pipe(styleguide.generate({
               title: 'My Styleguide',
-              server: true,
-              rootPath: outputPath,
-              port: 2000,
+              // If you want to have the styleguide available on http://localhost:2000 uncomment the next three lines
+              // and comment out the line "appRoot".
+              // You should then also ignore the styleguide folder in _config.yml then the styleguide would not be
+              // deployed with the live site.
+              // If you want to deploy with the live site and have it available under /styleguide leave like this.
+              //server: true,
+              //rootPath: outputPath,
+              //port: 2000,
+              appRoot: '/styleguide',
               overviewPath: 'README.md'
             }))
             .pipe(gulp.dest(outputPath));

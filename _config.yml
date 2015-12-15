@@ -18,5 +18,7 @@ encoding: UTF-8
 
 permalink: none
 
-exclude: ['bac', '*/bac', 'scss', 'node_modules', 'styleguide']
+# If you don't want to deploy the styleguide switch comments on the next two lines.
+# exclude: ['bac', '*/bac', 'scss', 'node_modules', 'styleguide']
+exclude: ['bac', '*/bac', 'scss', 'node_modules']
 
