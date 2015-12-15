@@ -164,11 +164,11 @@ div {
     padding: 1rem;
   }
 
-  &#organisers-box {
+  &.organisers-box {
     @extend %box;
   }
 
-  &#platinum-supporters-box {
+  &.platinum-supporters-box {
     @extend %box;
 
     h2 {
@@ -177,7 +177,7 @@ div {
     }
   }
 
-  &#gold-supporters-box {
+  &.gold-supporters-box {
     @extend %box;
 
     h2 {
@@ -186,7 +186,7 @@ div {
     }
   }
 
-  &#silver-supporters-box {
+  &.silver-supporters-box {
     @extend %box;
     margin-bottom: 0;
 
@@ -196,22 +196,22 @@ div {
     }
   }
 
-  &#organisers {
+  &.organisers {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#platinum-supporters {
+  &.platinum-supporters {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#gold-supporters {
+  &.gold-supporters {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#silver-supporters {
+  &.silver-supporters {
     display: flex;
     flex-wrap: wrap;
   }

@@ -1,4 +1,4 @@
-div#organisers-box, div#platinum-supporters-box, div#gold-supporters-box, div#silver-supporters-box {
+div.organisers-box, div.platinum-supporters-box, div.gold-supporters-box, div.silver-supporters-box {
   border-radius: .3rem;
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.15);
   margin: 0 0 1rem;
@@ -83,33 +83,33 @@ div.speaker {
   max-width: 25rem;
   padding: 1rem; }
 
-div#platinum-supporters-box h2 {
+div.platinum-supporters-box h2 {
   font-size: .9rem;
   margin: 0 0 1rem; }
 
-div#gold-supporters-box h2 {
+div.gold-supporters-box h2 {
   font-size: .8rem;
   margin: 0 0 1rem; }
 
-div#silver-supporters-box {
+div.silver-supporters-box {
   margin-bottom: 0; }
-  div#silver-supporters-box h2 {
+  div.silver-supporters-box h2 {
     font-size: .7rem;
     margin: 0 0 1rem; }
 
-div#organisers {
+div.organisers {
   display: flex;
   flex-wrap: wrap; }
 
-div#platinum-supporters {
+div.platinum-supporters {
   display: flex;
   flex-wrap: wrap; }
 
-div#gold-supporters {
+div.gold-supporters {
   display: flex;
   flex-wrap: wrap; }
 
-div#silver-supporters {
+div.silver-supporters {
   display: flex;
   flex-wrap: wrap; }
 
