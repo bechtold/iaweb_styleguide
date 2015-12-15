@@ -58,7 +58,7 @@ module.exports = function (grunt) {
         // If you want to watch all scss files instead, use the "**/*" globbing pattern
         files: ['scss/{,*/}*.{scss,sass}'],
         // runs the task `sass` whenever any watched file changes 
-        tasks: ['sass', 'jekyll:dist', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles']
+        tasks: ['sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist']
       },
       options: {
         // Sets livereload to true for livereload to work 
@@ -138,6 +138,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-gulp');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'jekyll:dist', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'concurrent']);
+  grunt.registerTask('default', ['sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
 
 };
