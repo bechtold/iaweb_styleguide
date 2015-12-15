@@ -1,4 +1,7 @@
 module.exports = function (grunt) {
+  var gulp = require('gulp'),
+      styleguide = require('sc5-styleguide');
+
 
   // Project configuration.
   grunt.initConfig({
@@ -55,7 +58,7 @@ module.exports = function (grunt) {
         // If you want to watch all scss files instead, use the "**/*" globbing pattern
         files: ['scss/{,*/}*.{scss,sass}'],
         // runs the task `sass` whenever any watched file changes 
-        tasks: ['sass', 'jekyll:dist']
+        tasks: ['sass', 'jekyll:dist', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles']
       },
       options: {
         // Sets livereload to true for livereload to work 
@@ -95,6 +98,26 @@ module.exports = function (grunt) {
           baseDir: "./_site/"
         }
       }
+    },
+
+    gulp: {
+      'styleguide-generate': function() {
+        var outputPath = 'styleguide';
+        return gulp.src(['scss/*.scss'])
+            .pipe(styleguide.generate({
+              title: 'My Styleguide',
+              server: true,
+              rootPath: outputPath,
+              port: 2000,
+              overviewPath: 'README.md'
+            }))
+            .pipe(gulp.dest(outputPath));
+      },
+      'styleguide-applystyles': function() {
+        gulp.src('css/uxd.css')
+            .pipe(styleguide.applyStyles())
+            .pipe(gulp.dest('styleguide'));
+      }
     }
 
   });
@@ -106,8 +129,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-sass-lint');
   grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-gulp');
 
   // Default task(s).
-  grunt.registerTask('default', ['concurrent']);
+  grunt.registerTask('default', ['sass', 'jekyll:dist', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'concurrent']);
 
 };
