@@ -18,5 +18,5 @@ encoding: UTF-8
 
 permalink: none
 
-exclude: ['bac', '*/bac', 'scss']
+exclude: ['bac', '*/bac', 'scss', 'node_modules']
 
