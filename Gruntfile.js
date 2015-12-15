@@ -29,12 +29,12 @@ module.exports = function (grunt) {
     },
 
 
-    // Grunt-sass 
+    // Grunt-sass
     sass: {
       app: {
-        // Takes every file that ends with .scss from the scss 
-        // directory and compile them into the css directory. 
-        // Also changes the extension from .scss into .css. 
+        // Takes every file that ends with .scss from the scss
+        // directory and compile them into the css directory.
+        // Also changes the extension from .scss into .css.
         // Note: file name that begins with _ are ignored automatically
         files: [{
           expand: true,
@@ -54,14 +54,15 @@ module.exports = function (grunt) {
     // Grunt-contrib-watch
     watch: {
       sass: {
-        // Watches all Sass or Scss files within the scss folder and one level down. 
+        // Watches all Sass or Scss files within the scss folder and one level down.
         // If you want to watch all scss files instead, use the "**/*" globbing pattern
-        files: ['scss/{,*/}*.{scss,sass}'],
-        // runs the task `sass` whenever any watched file changes 
-        tasks: ['sass', 'jekyll:dist', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles']
+        files: ['{,*/}*', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
+        //files: ['gruntfile.js']
+        // runs the task `sass` whenever any watched file changes
+        tasks: ['sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
       },
       options: {
-        // Sets livereload to true for livereload to work 
+        // Sets livereload to true for livereload to work
         // (livereload is not covered in this article)
         //        livereload: true,
         //        spawn: false
@@ -79,7 +80,7 @@ module.exports = function (grunt) {
         logConcurrentOutput: true
       }
     },
-    
+
     // lint the sass files
     sasslint: {
         options: {
@@ -138,6 +139,6 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-gulp');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'jekyll:dist', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'concurrent']);
+  grunt.registerTask('default', ['sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
 
 };

@@ -50,7 +50,7 @@ $red: #f00;
 
 div {
 
-  &#mysite {
+  &.mysite {
     border-style: none;
     margin: 0 auto;
     padding: 0;
@@ -141,11 +141,11 @@ div {
     }
   }
 
-  &#breadcrumbs {
+  &.breadcrumbswrapper {
     margin-bottom: 2rem;
   }
 
-  &#speakers {
+  &.speakers {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -164,7 +164,7 @@ div {
     padding: 1rem;
   }
 
-  &#organisers-box {
+  &.organisers-box {
     @extend %box;
   }
 
@@ -178,7 +178,8 @@ div {
 //
 // Styleguide 1.2
 
-  &#platinum-supporters-box {
+  &.platinum-supporters-box {
+
     @extend %box;
 
     h2 {
@@ -187,7 +188,7 @@ div {
     }
   }
 
-  &#gold-supporters-box {
+  &.gold-supporters-box {
     @extend %box;
 
     h2 {
@@ -196,7 +197,7 @@ div {
     }
   }
 
-  &#silver-supporters-box {
+  &.silver-supporters-box {
     @extend %box;
     margin-bottom: 0;
 
@@ -206,22 +207,22 @@ div {
     }
   }
 
-  &#organisers {
+  &.organisers {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#platinum-supporters {
+  &.platinum-supporters {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#gold-supporters {
+  &.gold-supporters {
     display: flex;
     flex-wrap: wrap;
   }
 
-  &#silver-supporters {
+  &.silver-supporters {
     display: flex;
     flex-wrap: wrap;
   }
@@ -242,16 +243,16 @@ div {
     margin: 0 1rem 1rem 0;
   }
 
-  &#register-button {
+  &.register-button {
     margin: 2rem auto;
     width: 10rem;
   }
 
-  &#location {
+  &.location {
     margin: 2rem 0 1rem;
   }
 
-  &#location-map {
+  &.location-map {
     display: inline-block;
     margin: 0;
     text-align: left;
@@ -259,7 +260,7 @@ div {
     width: 50%;
   }
 
-  &#location-links {
+  &.location-links {
     display: inline-block;
     margin: 0;
     text-align: left;
@@ -267,13 +268,13 @@ div {
     width: 15rem;
   }
 
-  &#main-organisers-box {
+  &.main-organisers-box {
     h2 {
       font-size: 1rem;
     }
   }
 
-  &#inffeld-photos {
+  &.inffeld-photos {
     figure {
       margin: 1rem auto 2rem;
       text-align: center;
@@ -324,15 +325,15 @@ header {
 
   div {
 
-    &#title {
+    &.title {
       width: auto;
     }
 
-    &#tagline {
+    &.tagline {
       font-size: .7rem;
     }
 
-    &#logo {
+    &.logo {
       img {
         display: block;
         margin-right: 1rem;
@@ -340,7 +341,7 @@ header {
       }
     }
 
-    &#uxg-logo {
+    &.uxg-logo {
       img {
         display: block;
         margin-left: 1rem;
@@ -427,11 +428,11 @@ img {
     width: 4.5rem;
   }
 
-  &#supp-logo-feri {
+  &.supp-logo-feri {
     max-height: 3rem;
   }
 
-  &#map-i7 {
+  &.map-i7 {
     display: block;
     margin-right: 1rem;
     min-width: 10rem;
@@ -441,15 +442,15 @@ img {
 @media only all and(max-width: 40rem) {
   header {
     div {
-      &#title {
+      &.title {
         width: auto;
       }
 
-      &#tagline {
+      &.tagline {
         font-size: .5rem;
       }
 
-      &#logo{
+      &.logo {
 
         img {
           display: block;
@@ -458,7 +459,7 @@ img {
         }
       }
 
-      &#uxg-logo{
+      &.uxg-logo {
 
         img {
           display: block;
@@ -474,13 +475,13 @@ img {
   }
 
   div {
-    &#container {
+    &.container {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
 
-    &#supporters {
+    &.supporters {
       width: 100%;
     }
   }
@@ -488,13 +489,13 @@ img {
 
 @media only all and(min-width: 40rem) and(max-width: 60rem) {
   div {
-    &#container {
+    &.container {
       display: flex;
       justify-content: space-between;
       width: 100%;
     }
 
-    &#supporters {
+    &.supporters {
       flex-basis: 9rem;
       flex-shrink: 0;
       margin-left: 2rem;
@@ -504,17 +505,17 @@ img {
 
 @media only all and(min-width: 60rem) {
   div {
-    &#mysite {
+    &.mysite {
       max-width: 60rem;
     }
 
-    &#container {
+    &.container {
       display: flex;
       justify-content: space-between;
       width: 100%;
     }
 
-    &#supporters {
+    &.supporters {
       flex-basis: 19rem;
       flex-shrink: 0;
       margin-left: 3rem;
