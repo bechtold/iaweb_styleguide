@@ -65,7 +65,7 @@ div.menu {
         position: absolute;
         top: 0; }
 
-div#breadcrumbs {
+div.breadcrumbswrapper {
   margin-bottom: 2rem; }
 
 div#speakers {
