@@ -257,13 +257,13 @@ div {
     width: 15rem;
   }
 
-  &#main-organisers-box {
+  &.main-organisers-box {
     h2 {
       font-size: 1rem;
     }
   }
 
-  &#inffeld-photos {
+  &.inffeld-photos {
     figure {
       margin: 1rem auto 2rem;
       text-align: center;
@@ -391,7 +391,7 @@ img {
     width: 4.5rem;
   }
 
-  &#supp-logo-feri {
+  &.supp-logo-feri {
     max-height: 3rem;
   }
 
@@ -413,7 +413,7 @@ img {
         font-size: .5rem;
       }
 
-      &.logo{
+      &.logo {
 
         img {
           display: block;
@@ -422,7 +422,7 @@ img {
         }
       }
 
-      &.uxg-logo{
+      &.uxg-logo {
 
         img {
           display: block;
@@ -438,13 +438,13 @@ img {
   }
 
   div {
-    &#container {
+    &.container {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
 
-    &#supporters {
+    &.supporters {
       width: 100%;
     }
   }
@@ -452,13 +452,13 @@ img {
 
 @media only all and(min-width: 40rem) and(max-width: 60rem) {
   div {
-    &#container {
+    &.container {
       display: flex;
       justify-content: space-between;
       width: 100%;
     }
 
-    &#supporters {
+    &.supporters {
       flex-basis: 9rem;
       flex-shrink: 0;
       margin-left: 2rem;
@@ -472,13 +472,13 @@ img {
       max-width: 60rem;
     }
 
-    &#container {
+    &.container {
       display: flex;
       justify-content: space-between;
       width: 100%;
     }
 
-    &#supporters {
+    &.supporters {
       flex-basis: 19rem;
       flex-shrink: 0;
       margin-left: 3rem;
