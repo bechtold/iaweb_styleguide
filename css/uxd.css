@@ -4,7 +4,7 @@ div#organisers-box, div#platinum-supporters-box, div#gold-supporters-box, div#si
   margin: 0 0 1rem;
   padding: .3rem; }
 
-div#mysite {
+div.mysite {
   border-style: none;
   margin: 0 auto;
   padding: 0; }
@@ -267,7 +267,7 @@ img#map-i7 {
     margin-left: 2rem; } }
 
 @media only all and (min-width: 60rem) {
-  div#mysite {
+  div.mysite {
     max-width: 60rem; }
   div#container {
     display: flex;

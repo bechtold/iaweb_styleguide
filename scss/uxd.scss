@@ -50,7 +50,7 @@ $red: #f00;
 
 div {
 
-  &#mysite {
+  &.mysite {
     border-style: none;
     margin: 0 auto;
     padding: 0;
@@ -468,7 +468,7 @@ img {
 
 @media only all and(min-width: 60rem) {
   div {
-    &#mysite {
+    &.mysite {
       max-width: 60rem;
     }
 
