@@ -4,25 +4,25 @@
   margin: 0 auto;
   padding: 0;
 
-  @media only all and(min-width: 60rem) {
+  @media only all and(min-width: $breakpoint-2) {
     max-width: 60rem;
   }
 }
 
 .container {
-  @media only all and(max-width: 40rem) {
+  @media only all and(max-width: $breakpoint-1) {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  @media only all and(min-width: 40rem) and(max-width: 60rem) {
+  @media only all and(min-width: $breakpoint-1) and(max-width: $breakpoint-2) {
     display: flex;
     justify-content: space-between;
     width: 100%;
   }
 
-  @media only all and(min-width: 60rem) {
+  @media only all and(min-width: $breakpoint-2) {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -31,15 +31,15 @@
 
 
 .supporters {
-  @media only all and(max-width: 40rem) {
+  @media only all and(max-width: $breakpoint-1) {
     width: 100%;
   }
-  @media only all and(min-width: 40rem) and(max-width: 60rem) {
+  @media only all and(min-width: $breakpoint-1) and(max-width: $breakpoint-2) {
     flex-basis: 9rem;
     flex-shrink: 0;
     margin-left: 2rem;
   }
-  @media only all and(min-width: 60rem) {
+  @media only all and(min-width: $breakpoint-2) {
     flex-basis: 19rem;
     flex-shrink: 0;
     margin-left: 3rem;

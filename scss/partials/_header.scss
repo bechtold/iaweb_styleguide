@@ -32,7 +32,7 @@ header {
   .tagline {
     font-size: .7rem;
 
-    @media only all and(max-width: 40rem) {
+    @media only all and(max-width: $breakpoint-1) {
       font-size: .5rem;
     }
   }
@@ -43,7 +43,7 @@ header {
       margin-right: 1rem;
       width: 2.5rem;
 
-      @media only all and(max-width: 40rem) {
+      @media only all and(max-width: $breakpoint-1) {
         display: block;
         margin-right: .5rem;
         width: 1.7rem;
@@ -57,7 +57,7 @@ header {
       margin-left: 1rem;
       width: 2.5rem;
 
-      @media only all and(max-width: 40rem) {
+      @media only all and(max-width: $breakpoint-1) {
         display: block;
         margin-left: .5rem;
         width: 1.7rem;
@@ -68,7 +68,7 @@ header {
   h1 {
     font-size: 2rem;
 
-    @media only all and(max-width: 40rem) {
+    @media only all and(max-width: $breakpoint-1) {
       font-size: 1rem;
     }
   }
