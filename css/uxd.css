@@ -125,21 +125,21 @@ div.gold-supp {
 div.silver-supp {
   margin: 0 1rem 1rem 0; }
 
-div#register-button {
+div.register-button {
   margin: 2rem auto;
   width: 10rem; }
 
-div#location {
+div.location {
   margin: 2rem 0 1rem; }
 
-div#location-map {
+div.location-map {
   display: inline-block;
   margin: 0;
   text-align: left;
   vertical-align: top;
   width: 50%; }
 
-div#location-links {
+div.location-links {
   display: inline-block;
   margin: 0;
   text-align: left;
@@ -229,7 +229,7 @@ img.silver-supp-logo {
 img#supp-logo-feri {
   max-height: 3rem; }
 
-img#map-i7 {
+img.map-i7 {
   display: block;
   margin-right: 1rem;
   min-width: 10rem; }

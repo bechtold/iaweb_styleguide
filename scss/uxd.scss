@@ -232,16 +232,16 @@ div {
     margin: 0 1rem 1rem 0;
   }
 
-  &#register-button {
+  &.register-button {
     margin: 2rem auto;
     width: 10rem;
   }
 
-  &#location {
+  &.location {
     margin: 2rem 0 1rem;
   }
 
-  &#location-map {
+  &.location-map {
     display: inline-block;
     margin: 0;
     text-align: left;
@@ -249,7 +249,7 @@ div {
     width: 50%;
   }
 
-  &#location-links {
+  &.location-links {
     display: inline-block;
     margin: 0;
     text-align: left;
@@ -395,7 +395,7 @@ img {
     max-height: 3rem;
   }
 
-  &#map-i7 {
+  &.map-i7 {
     display: block;
     margin-right: 1rem;
     min-width: 10rem;
