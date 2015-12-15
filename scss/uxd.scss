@@ -298,15 +298,15 @@ header {
 
   div {
 
-    &#title {
+    &.title {
       width: auto;
     }
 
-    &#tagline {
+    &.tagline {
       font-size: .7rem;
     }
 
-    &#logo {
+    &.logo {
       img {
         display: block;
         margin-right: 1rem;
@@ -314,7 +314,7 @@ header {
       }
     }
 
-    &#uxg-logo {
+    &.uxg-logo {
       img {
         display: block;
         margin-left: 1rem;
@@ -405,15 +405,15 @@ img {
 @media only all and(max-width: 40rem) {
   header {
     div {
-      &#title {
+      &.title {
         width: auto;
       }
 
-      &#tagline {
+      &.tagline {
         font-size: .5rem;
       }
 
-      &#logo{
+      &.logo{
 
         img {
           display: block;
@@ -422,7 +422,7 @@ img {
         }
       }
 
-      &#uxg-logo{
+      &.uxg-logo{
 
         img {
           display: block;

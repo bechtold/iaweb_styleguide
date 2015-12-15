@@ -169,15 +169,15 @@ header {
   justify-content: space-between;
   margin: 1rem auto;
   width: 100%; }
-  header div#title {
+  header div.title {
     width: auto; }
-  header div#tagline {
+  header div.tagline {
     font-size: .7rem; }
-  header div#logo img {
+  header div.logo img {
     display: block;
     margin-right: 1rem;
     width: 2.5rem; }
-  header div#uxg-logo img {
+  header div.uxg-logo img {
     display: block;
     margin-left: 1rem;
     width: 2.5rem; }
@@ -235,15 +235,15 @@ img.map-i7 {
   min-width: 10rem; }
 
 @media only all and (max-width: 40rem) {
-  header div#title {
+  header div.title {
     width: auto; }
-  header div#tagline {
+  header div.tagline {
     font-size: .5rem; }
-  header div#logo img {
+  header div.logo img {
     display: block;
     margin-right: .5rem;
     width: 1.7rem; }
-  header div#uxg-logo img {
+  header div.uxg-logo img {
     display: block;
     margin-left: .5rem;
     width: 1.7rem; }
