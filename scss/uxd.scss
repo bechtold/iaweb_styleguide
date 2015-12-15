@@ -1,4 +1,29 @@
 //colors
+// Colors and typography
+//
+// This section describes base colors and typography
+//
+// Styleguide 1.0
+
+// Main colors
+//
+// $color-alto-approx - header background-color
+// $black-15 - Sused for the box-shadow
+// $gallery - ul background-color
+// $color-trout-approx - hovers background-color
+// $white - Used for a color
+// $black - used for the borders
+// $color-shuttle-gray-approx - used for the background
+// $color-pale-sky-approx - used for the border-top
+// $color-mid-gray-approx - used for the border-bottom
+// $color-mercury-approx - used for background-color
+// $red - used for the color
+//
+// markup:
+// <div style="background: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1
+
 $color-alto-approx: #ddd;
 $black-15: rgba(0, 0, 0, .15);
 $gallery: #efefef;
