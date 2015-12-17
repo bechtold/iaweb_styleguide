@@ -104,7 +104,7 @@ module.exports = function (grunt) {
     gulp: {
       'styleguide-generate': function() {
         var outputPath = 'styleguide';
-        return gulp.src(['scss/*.scss'])
+        return gulp.src(['scss/**/*.scss'])
             .pipe(styleguide.generate({
               title: 'My Styleguide',
               // If you want to have the styleguide available on http://localhost:2000 uncomment the next three lines
