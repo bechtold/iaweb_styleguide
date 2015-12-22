@@ -790,3 +790,10 @@ img.map-i7 {
     content: '['; }
   .credit:after {
     content: ']'; }
+
+.message {
+  color: white; }
+  .message.red {
+    background: red; }
+  .message.green {
+    background: green; }
