@@ -12,6 +12,8 @@ files:
     - 'scss/_includes.scss'
     - 'scss/_partials.scss'
     - 'scss/_variables.scss'
+    - 'scss/style.scss'
+    - 'scss/base/*.scss'
 # Rule Configuration
 rules:
   indentation:
