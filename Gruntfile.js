@@ -85,7 +85,7 @@ module.exports = function (grunt) {
         options: {
             configFile: '.sass-lint.yml',
         },
-        target: ['scss/*.scss']
+        target: ['scss/**/*.scss']
     },
 
     // Browsersync
