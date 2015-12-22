@@ -7,11 +7,11 @@ options:
   formatter: stylish
 # File Options
 files:
-  include: 'scss/**/*.s+(a|c)ss'
   ignore:
-    - 'scss/reset.scss'
-    - 'scss/normalise.scss'
-    - 'scss/base.scss'
+    - 'scss/_base.scss'
+    - 'scss/_includes.scss'
+    - 'scss/_partials.scss'
+    - 'scss/_variables.scss'
 # Rule Configuration
 rules:
   indentation:
