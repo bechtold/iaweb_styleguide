@@ -1,12 +1,50 @@
-// Logos
+// Header
 //
-// We have two logos
+//The header concists of a title, tagline and two logos on each side.
+//
+// Styleguide 4.5
+
+// Title
 //
 // markup:
-// <div id="logo"> logo </div> - used for the right logo
-// <div id="logo"> uxg_logo </div> - used for the left logo
+//<header>
+//<div class="title">
+//<h1>UX Day Graz 2015</h1>
+//<div>
+//</header>
 //
-// Styleguide 2.1
+// Styleguide 4.5.1
+
+// Tagline
+//
+// markup:
+//<header>
+//<div class="tagline">
+//"A Community event for practitioners of user experience, interaction design, and usability!"
+//<div>
+//</header>
+//
+// Styleguide 4.5.2
+
+// Logos
+//
+//The header concists of a title, tagline and two logos on each side.
+//
+// markup:
+//<header>
+//<div class="logo">
+//<a href="/" title="UX Day Graz 2015">
+//<img src="/logos/uxd2015-logo.svg" alt ="UX Day Graz 2015 Logo" class="logo">
+//</a>
+//</div>
+// <div class="uxg-logo">
+//<a href="https://uxgraz.iicm.tugraz.at/" title="UX Graz Community">
+//<img src="/logos/uxg-logo.svg" alt="UX Graz Logo" class="logo">
+//</a>
+//</div>
+//</header>
+//
+// Styleguide 4.5.3
 
 header {
   background-color: $color-alto-approx;
