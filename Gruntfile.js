@@ -56,7 +56,7 @@ module.exports = function (grunt) {
       sass: {
         // Watches all Sass or Scss files within the scss folder and one level down.
         // If you want to watch all scss files instead, use the "**/*" globbing pattern
-        files: ['{,*/}*', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
+        files: ['{,*/}**', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
         //files: ['gruntfile.js']
         // runs the task `sass` whenever any watched file changes
         tasks: ['sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
@@ -96,7 +96,8 @@ module.exports = function (grunt) {
       options: {
         server: {
           baseDir: "./_site/"
-        }
+        },
+        open: false
       }
     },
 
