@@ -1,3 +1,19 @@
+// Location and Map
+//
+// Location and a city map
+//
+// markup:
+// <div class="location">
+//   <div class="location-map">
+//     <p>
+//       <a href="/image/map-i7.svg">
+//         <img class="map-i7" src="/images/map-i7.svg">
+//       </a>
+//     </p>
+//   </div> 
+//
+// Styleguide 8.1
+
 .location {
   margin: 2rem 0 1rem;
 }
@@ -9,6 +25,28 @@
   vertical-align: top;
   width: 50%;
 }
+
+
+// Location and Links
+//
+// Location and the location links
+//
+// markup:
+// <div class="location-links">
+//   <ul>
+//     <li>
+//       <a href="/images/map-i7.pdf">Printable map (PDF)</a>
+//     </li>
+//     <li>
+//       <a href="http://openstreetmap.org/#map=17/47.05778/15.46044">Open Street Map</a>
+//     </li>
+//     <li>
+//       <a href="http://maps.google.com/maps?q=Graz+Inffeldgasse-25d">Google Maps</a>
+//     </li>
+//   </ul> 
+// </div>
+//
+// Styleguide 8.2
 
 .location-links {
   display: inline-block;
