@@ -1,3 +1,23 @@
+// Figure
+// 
+// The Pictures from Inffeldgasse
+//
+// markup:
+// <div class="inffeld-photos">
+//   <figure">
+//    <a href="/images/venue-p01.jpg">
+//      <img id="venue-p01" src="/images/venue-p01.jpg" alt="Inffeldgasse Entrance">
+//    </a>
+//    <figcaption>
+//      <p class="caption">"Entrance to Inffeldgasse campus."
+//        <span class="credit"> "Photo &#169; 2013 Keith Andrews."</span>
+//      </p>
+//    </figcaption>
+//   <figure>
+// </div>
+//
+// Styleguide 3.1
+
 
 figure {
   margin: 1rem auto 2rem;
