@@ -760,12 +760,3 @@ nav {
   .silver-supporters-box img {
     max-height: 2rem;
     width: 4.5rem; }
-
-.message {
-  color: white; }
-  .message.red {
-    background: red; }
-  .message.green {
-    background: green; }
-  .message.blue {
-    background: blue; }

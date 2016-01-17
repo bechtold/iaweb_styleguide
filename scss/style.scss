@@ -15,58 +15,32 @@
 //
 // Styleguide 2.0
 
-// Testing stuff
-//
-// This section is used for testing stuff.
-//
-// Styleguide 3.0
-
-// Breadcrumbs
-//
-// Information 
-//
-// Styleguide 4.0
-
 // Figures
 //
 // All the Figures
 //
-// Styleguide 5.0
+// Styleguide 3.0
 
 // Navigation
 //
 // All about the navigation in the website
 //
-// Styleguide 6.0
+// Styleguide 4.0
 
 // Page layout
 //
 // All information about the page layout
 //
+// Styleguide 5.0
+
+// Location and Maps
+//
+// Locations and maps showed into the website under Venue
+//
+// Styleguide 6.0
+
+// Speakers
+//
+// Information about the speakers and the guest of the event
+//
 // Styleguide 7.0
-
-// testing stuff
-//
-// .red - Lighter than default action color
-// .green - Darker than default action color
-// .blue - Darker than default action color
-//
-// markup:
-// <div class="message {$modifiers}">Message {$modifiers}</div>
-//
-// Styleguide 3.1
-.message{
-  color: white;
-  
-  &.red{
-    background: red;
-  }
-
-  &.green{
-    background: green;
-  }
-
-  &.blue{
-    background: blue;
-  }
-}

@@ -1,3 +1,33 @@
+// Speakers
+//
+// Introduction of the speakers, e.g. personal information, the topic, they will talk about, biography of the person
+//
+// markup:
+// <div class="speakers">
+//   <div class="speaker">
+//     <img class="speaker-photo" src="/images/eric.jpg">
+//     <h2 class="spekername">Eric Egger<h2>
+//     <h3 class="affiliation">W3C Web Accessibility Initiative</h3>
+//     <p class="contact-info">
+//       <span class="email">"Email: "<a href="mailto:ee@w3.org">ee@w3.org</a></span>
+//       <span clas="web">"Web: "<a href="http://yatil.net/">http://yatil.net/</a></span>
+//     </p>
+//   <div class="talk">
+//     <h2 class="talktitle">
+//       How to Improve Your Website's Accessibility Without Going Crazy
+//       </h2>
+//     <h2 class="abstract">Abstract</h2>
+//     <p>"... Some text here ..."</p>
+//   </div>
+//   <div class="biiography">
+//     <h2 class="biography">Biography</h2>
+//     <p>"... Some biographical text here ..."</p> 
+//   </div>
+//  </div>
+// </div>
+//
+// Styleguide 7.1
+
 .speakers {
   display: flex;
   flex-wrap: wrap;
