@@ -3,3 +3,29 @@
 @import "includes";
 @import "partials";
 
+// Testing stuff
+//
+// This section is used for testing stuff.
+//
+// Styleguide 3.0
+
+// testing stuff
+//
+// .red - Lighter than default action color
+// .green - Darker than default action color
+//
+// markup:
+// <div class="message {$modifiers}">Message {$modifiers}</div>
+//
+// Styleguide 3.1
+.message{
+  color: white;
+  
+  &.red{
+    background: red;
+  }
+  
+  &.green{
+    background: green;
+  }
+}
