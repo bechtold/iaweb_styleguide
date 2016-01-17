@@ -1,3 +1,18 @@
+// Navigation
+//
+// The navigation bar 
+//
+// markup:
+// <nav id="sitenav">
+//  <ul>
+//    <li class="current"><a href="/">Home</a></li>
+//    <li><a href="/">Program</a></li>
+//    <li><a href="/">Speaker</a></li>
+//  </ul>
+// </nav>
+//
+// Styleguide 6.1
+
 nav {
   //Instead of the line below you could use @include box-sizing($bs)
   box-sizing: border-box;
