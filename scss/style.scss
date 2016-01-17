@@ -13,6 +13,7 @@
 //
 // .red - Lighter than default action color
 // .green - Darker than default action color
+// .blue - Darker than default action color
 //
 // markup:
 // <div class="message {$modifiers}">Message {$modifiers}</div>
@@ -24,8 +25,12 @@
   &.red{
     background: red;
   }
-  
+
   &.green{
     background: green;
+  }
+
+  &.blue{
+    background: blue;
   }
 }
