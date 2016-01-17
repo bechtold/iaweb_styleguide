@@ -97,12 +97,9 @@ In order to fix it create a file with the name ".gitattribues" within the main g
 *.jpg binary
 ```
 
-#Gruntfile.js
-Within this file all the task which are executed with grunt are being initialized and set up.
+## Optional Changes
 
-##Changes that can be made
-
-## sass-lint-yml
+### sass-lint-yml
 Within this file all the properties for the linting of the sass file are defined.
 For this project we used a pretty simple but also strict config.
 ```
@@ -149,7 +146,7 @@ To change the destinatition the value for target needs to be changed accordingly
 [Default Config](https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml)
 
 
-##_config.yml
+### _config.yml
 Jekylls configuration is done within the _config.yml file. Within this file there isn't much to be changed.
 with the 'exclude' option it is possible to add folder which should not be compiled by jekyll.
 The two folders scss and node_modules were added by us in oder to increase the compiling speed and also because those are files which are not needed on the live site.
@@ -161,7 +158,7 @@ If the styleguide shouldn't be deployed either there a second exlude line has be
 exclude: ['bac', '*/bac', 'scss', 'node_modules']
 ```
 
-## Hosting the site with Jekyll or with browser-sync
+### Hosting the site with Jekyll or with browser-sync
 
 With the default setup the webpage is hosted at localhost with the help of browser sync. This package has a lot of little features which are pretty handy regarding the workflow like automatically refreshing the webpage and also gives the option to synchronice multiple browsers running at different devices.
 
@@ -189,4 +186,58 @@ gulp: {
             .pipe(gulp.dest('styleguide'));
       }
     },
+
+```
+Also the concurrent task needs to changed. Comment out the 'browserSync' task and uncomment the 'jekyll:serve' task.
+
+```
+concurrent: {
+      serve: [
+                'watch',
+                'jekyll:serve'
+                //'browserSync'
+            ],
+      options: {
+        logConcurrentOutput: true
+      }
+    },
+```
+
+
+## Gruntfile.js
+Within this file all the task which are executed with grunt are being initialized and set up.
+
+
+### jekyll
+TODO blablablablabla
+
+
+
+### sass
+Takes every file that ends with '.scss' from the scss directory and compile them into the css directory. Also changes the extension from '.scss' into '.css'. With the 'cwd' option the current working directory can be changed. With the 'src' option specific files can be chosen. To change the destination of the generated file the 'dest' option needs to be changed. With 'the 'ext' option the extension of the compiled file is specified.
+
+### watch
+This watches all the folders within the directory for changes.
+The wanted files can be defined with the 'files' option. We are watching all folders except for the ones defined with a callsign.
+With the 'tasks' option it is possible to define the tasks that should be run after a change is detected.
+
+
+### concurrent
+Currently the only tasks which are running at the same time are the 'watch' and the 'browserSync' tasks. Those tasks can be specified with the 'serve' option.
+
+### sass-lin
+Within this task the location of the configuration file can be specified with the 'configFile' optionand the scss files which need to be linted are specified with the 'target' option.
+
+### browser-sync
+With the help of 'src' option the css files which are going to be injected automatically are defined. Also the base directory for the final webpage is specified with the 'baseDir' option
+
+### gulp
+With this task the steguide is being generated. With the 'title' option the name that can be seen within the tab of a browser can be changed. With the variable 'outputPath' the name of the folder that will be created within the root folder can be changed. For instruction on changed the server hosting please refer to the section 'Hosting the site with Jekyll or with browser-sync' within this site.
+
+### sass_globbing
+
+This ask handles the the migration of the different scss files into a single one. The first part of the 'files' option defines the name of the finished scss file. With the second part of the option the files needed for the merging are specified.
+```
+files: {
+          'scss/_base.scss': 'scss/base/**/*.scss',
 ```
