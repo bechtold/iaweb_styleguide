@@ -1,27 +1,40 @@
 # iaweb_styleguide
 
-## Needs to be installed
+
+## Quickguide
+- [Install Git](https://git-scm.com/downloads) (optional)
+- [Install Ruby](https://www.ruby-lang.org/en/downloads/)
+- [Install NodeJS](https://nodejs.org/en/download/)
+- Install Bundler with ```gem install bundler```
+- Fork Github Project <https://github.com/bechtold/iaweb_styleguide.git> or download zip
+- Change into Project/Git Folder
+- run ```bundle install```
+- run ```npm install```
+- run ```grunt```
+- open <http://localhost:3000/> in the browser
+
+## Step by Step Guide with explanation
 
 In order for this project to work properly a little bit of software has to be installed and set up.
 Within this section step by step instructions will be given in order to get the project running.
 
 Ruby is a dynamic and free programming language. It is needed within this project in order to run Jekyll.
 ### Ruby 2.3
-Install the fitting Version of Ruby depending on the operating system. Official Webpage](https://www.ruby-lang.org/en/downloads/)
+Install the fitting Version of Ruby depending on the operating system. [Official Download Webpage](https://www.ruby-lang.org/en/downloads/)
 
 ### Bundler 1.11.0
-This isa little helper tool that will be installed in order to make sure that everyone participating in the project is using the same versions of each package.  [Documentation](http://bundler.io/)
+This isa little helper tool that will be installed in order to make sure that everyone participating in the project is using the same versions of each package. [Documentation](http://bundler.io/)
+Install the current version by typing this into your console. The location of the shell does not matter since bundler is going to be installed globally.
 ```
 gem install bundler
 ```
-
-With the help of the following command every piece of the bundle is going to be installed automatically.
-
+With the help of the following command every piece of the bundle that is defined within the 'Gemfile' file is going to be installed automatically. In our case this only includes Jekyll.
 ```
 bundle install
 ```
+
 ### NodeJS 4.2.1
-NodeJS is a javascript runtime. It uses a non blockiing I/O modell and is event-driven. [Official Webpage](https://nodejs.org/en/download/)
+NodeJS is a javascript runtime. It uses a non blockiing I/O modell and is event-driven. This also needs to installed manually.[Official Download Webpage](https://nodejs.org/en/download/)
 
 ### Npm
 NodeJS also comes with javascripts package manager npm which is needed in order to install all packages used based on javascript. [Official Webpage](https://www.npmjs.com/)
@@ -72,7 +85,7 @@ This tool provides us with the functionality of merging all the sass files into 
 
 
 
-# Other things that need to be done
+## Other things that need to be done
 If more than one operating system is going to be used there is the neccessity to add a .gitattributes files because else git will mess with your line endings and the scss linter will not work correctly anymore.
 In order to fix it create a file with the name ".gitattribues" within the main git/project folder with the following content:
 ```
@@ -84,6 +97,96 @@ In order to fix it create a file with the name ".gitattribues" within the main g
 *.jpg binary
 ```
 
-
 #Gruntfile.js
 Within this file all the task which are executed with grunt are being initialized and set up.
+
+##Changes that can be made
+
+## sass-lint-yml
+Within this file all the properties for the linting of the sass file are defined.
+For this project we used a pretty simple but also strict config.
+```
+#########################
+## Sample Sass Lint File
+#########################
+# Linter Options
+options:
+  # Set the formatter to 'html'
+  formatter: stylish
+# File Options
+files:
+  ignore:
+    - 'scss/_base.scss'
+    - 'scss/_includes.scss'
+    - 'scss/_partials.scss'
+    - 'scss/_variables.scss'
+    - 'scss/style.scss'
+    - 'scss/base/*.scss'
+# Rule Configuration
+rules:
+  indentation:
+    - 2
+    -
+      size: 2
+```
+With the formatter:stylish option we force the output of the linter to be wrapped in html.
+Within ignore we list all the scss files which should be ingored by the linting process.
+Indentation specifies the number of spaces used.
+
+The target location for the linter is specified within the 'Gruntfile.js' file.
+To change the destinatition the value for target needs to be changed accordingly within the sasslint task.
+
+```
+// lint the sass files
+    sasslint: {
+        options: {
+            configFile: '.sass-lint.yml',
+        },
+        target: ['scss/**/*.scss']
+    },
+```
+[Sample Config](https://github.com/sasstools/sass-lint/blob/develop/docs/sass-lint.yml)
+[Default Config](https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml)
+
+
+##_config.yml
+Jekylls configuration is done within the _config.yml file. Within this file there isn't much to be changed.
+with the 'exclude' option it is possible to add folder which should not be compiled by jekyll.
+The two folders scss and node_modules were added by us in oder to increase the compiling speed and also because those are files which are not needed on the live site.
+
+If the styleguide shouldn't be deployed either there a second exlude line has been added within this file that can be switched with the current one. This insures that the styleguide folder isn't complied into the _site folder.
+
+```
+# exclude: ['bac', '*/bac', 'scss', 'node_modules', 'styleguide']
+exclude: ['bac', '*/bac', 'scss', 'node_modules']
+```
+
+## Hosting the site with Jekyll or with browser-sync
+
+With the default setup the webpage is hosted at localhost with the help of browser sync. This package has a lot of little features which are pretty handy regarding the workflow like automatically refreshing the webpage and also gives the option to synchronice multiple browsers running at different devices.
+
+In order to switch to Jekylls serve functions a few changes need to be made. All instruction can be found in the 'Gruntfile.js' file within the 'gulp' task. It is possible to change the port number to a desired value.
+This is an example how it should look like with Jekylls server hosting enabled. The Webpage can be located at <http://localhost:2000/>.
+
+```
+gulp: {
+      'styleguide-generate': function() {
+        var outputPath = 'styleguide';
+        return gulp.src(['scss/**/*.scss'])
+            .pipe(styleguide.generate({
+              title: 'My Styleguide',
+              server: true,
+              rootPath: outputPath,
+              port: 2000,
+              //appRoot: '/styleguide',
+              overviewPath: 'README.md'
+            }))
+            .pipe(gulp.dest(outputPath));
+      },
+      'styleguide-applystyles': function() {
+        gulp.src('css/style.css')
+            .pipe(styleguide.applyStyles())
+            .pipe(gulp.dest('styleguide'));
+      }
+    },
+```
