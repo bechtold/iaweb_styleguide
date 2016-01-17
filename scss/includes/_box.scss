@@ -5,4 +5,13 @@
   box-shadow: 0 0 .2rem $black-15;
   margin: 0 0 1rem;
   padding: .3rem;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      margin: 0 1rem 1rem 0;
+    }
+  }
 }

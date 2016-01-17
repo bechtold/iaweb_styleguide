@@ -493,6 +493,11 @@ pre {
   box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.15);
   margin: 0 0 1rem;
   padding: .3rem; }
+  .organisers-box > div, .platinum-supporters-box > div, .gold-supporters-box > div, .silver-supporters-box > div {
+    display: flex;
+    flex-wrap: wrap; }
+    .organisers-box > div > div, .platinum-supporters-box > div > div, .gold-supporters-box > div > div, .silver-supporters-box > div > div {
+      margin: 0 1rem 1rem 0; }
 
 .breadcrumbswrapper {
   margin-bottom: 2rem; }
@@ -514,6 +519,10 @@ pre {
   .breadcrumb:last-child:after {
     content: ''; }
 
+.register-button {
+  margin: 2rem auto;
+  width: 10rem; }
+
 figure {
   margin: 1rem auto 2rem;
   text-align: center;
@@ -525,6 +534,13 @@ figure {
   figure figcaption p {
     text-align: center;
     text-indent: 0; }
+
+.credit {
+  font-size: 60%; }
+  .credit:before {
+    content: '['; }
+  .credit:after {
+    content: ']'; }
 
 footer {
   background-color: #efefef;
@@ -584,6 +600,32 @@ header {
     @media only all and (max-width: 40rem) {
       header h1 {
         font-size: 1rem; } }
+
+.location {
+  margin: 2rem 0 1rem; }
+
+.location-map {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  vertical-align: top;
+  width: 50%; }
+
+.location-links {
+  display: inline-block;
+  margin: 0;
+  text-align: left;
+  vertical-align: top;
+  width: 15rem; }
+
+.map-i7 {
+  display: block;
+  margin-right: 1rem;
+  min-width: 10rem; }
+
+.important {
+  color: #f00;
+  font-weight: bold; }
 
 nav {
   box-sizing: border-box;
@@ -675,108 +717,11 @@ nav {
   max-width: 25rem;
   padding: 1rem; }
 
-.platinum-supporters-box h2 {
-  font-size: .9rem;
-  margin: 0 0 1rem; }
-
-.gold-supporters-box h2 {
-  font-size: .8rem;
-  margin: 0 0 1rem; }
-
-.silver-supporters-box {
-  margin-bottom: 0; }
-  .silver-supporters-box h2 {
-    font-size: .7rem;
-    margin: 0 0 1rem; }
-
-.organisers {
-  display: flex;
-  flex-wrap: wrap; }
-
-.platinum-supporters {
-  display: flex;
-  flex-wrap: wrap; }
-
-.gold-supporters {
-  display: flex;
-  flex-wrap: wrap; }
-
-.silver-supporters {
-  display: flex;
-  flex-wrap: wrap; }
-
-.main-org {
-  margin: 0 1rem 1rem 0; }
-
-.platinum-supp {
-  margin: 0 1rem 1rem 0; }
-
-.gold-supp {
-  margin: 0 1rem 1rem 0; }
-
-.silver-supp {
-  margin: 0 1rem 1rem 0; }
-
-.register-button {
-  margin: 2rem auto;
-  width: 10rem; }
-
-.location {
-  margin: 2rem 0 1rem; }
-
-.location-map {
-  display: inline-block;
-  margin: 0;
-  text-align: left;
-  vertical-align: top;
-  width: 50%; }
-
-.location-links {
-  display: inline-block;
-  margin: 0;
-  text-align: left;
-  vertical-align: top;
-  width: 15rem; }
-
-.main-organisers-box h2 {
-  font-size: 1rem; }
-
-img.speaker-photo {
+.speaker-photo {
   display: block;
   margin: 0 auto 1rem;
   max-height: 10rem;
   max-width: 100%; }
-
-img.org-logo {
-  max-height: 3.5rem;
-  width: 8rem; }
-
-img.platinum-supp-logo {
-  max-height: 3.5rem;
-  width: 8rem; }
-
-img.gold-supp-logo {
-  max-height: 2.2rem;
-  width: 5.8rem; }
-
-img.silver-supp-logo {
-  max-height: 2rem;
-  width: 4.5rem; }
-
-img.supp-logo-feri {
-  max-height: 3rem; }
-
-img.map-i7 {
-  display: block;
-  margin-right: 1rem;
-  min-width: 10rem; }
-
-.important {
-  color: #f00;
-  font-weight: bold; }
-
-.contact-info span {
-  display: block; }
 
 .talktitle:before {
   content: '\201C'; }
@@ -784,12 +729,37 @@ img.map-i7 {
 .talktitle:after {
   content: '\201D'; }
 
-.credit {
-  font-size: 60%; }
-  .credit:before {
-    content: '['; }
-  .credit:after {
-    content: ']'; }
+.contact-info span {
+  display: block; }
+
+.organisers-box img {
+  max-height: 3.5rem;
+  width: 8rem; }
+
+.platinum-supporters-box h2 {
+  font-size: .9rem;
+  margin: 0 0 1rem; }
+
+.platinum-supporters-box img {
+  max-height: 3.5rem;
+  width: 8rem; }
+
+.gold-supporters-box h2 {
+  font-size: .8rem;
+  margin: 0 0 1rem; }
+
+.gold-supporters-box img {
+  max-height: 2.2rem;
+  width: 5.8rem; }
+
+.silver-supporters-box {
+  margin-bottom: 0; }
+  .silver-supporters-box h2 {
+    font-size: .7rem;
+    margin: 0 0 1rem; }
+  .silver-supporters-box img {
+    max-height: 2rem;
+    width: 4.5rem; }
 
 .message {
   color: white; }

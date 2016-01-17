@@ -17,3 +17,15 @@ figure {
     }
   }
 }
+
+.credit {
+  font-size: 60%;
+
+  &:before {
+    content: '[';
+  }
+
+  &:after {
+    content: ']';
+  }
+}

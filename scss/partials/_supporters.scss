@@ -1,0 +1,62 @@
+.organisers-box {
+  @extend %box;
+
+  img {
+    max-height: 3.5rem;
+    width: 8rem;
+  }
+}
+
+
+// Headings
+//
+// These are our headings
+//
+// markup:
+// <h1 >title</h1> - used fot the title
+// <h2 >Heading 2</h2>
+//
+// Styleguide 1.2
+
+.platinum-supporters-box {
+  @extend %box;
+
+  h2 {
+    font-size: .9rem;
+    margin: 0 0 1rem;
+  }
+
+  img {
+    max-height: 3.5rem;
+    width: 8rem;
+  }
+}
+
+.gold-supporters-box {
+  @extend %box;
+
+  h2 {
+    font-size: .8rem;
+    margin: 0 0 1rem;
+  }
+
+  img {
+    max-height: 2.2rem;
+    width: 5.8rem;
+  }
+}
+
+.silver-supporters-box {
+  @extend %box;
+  margin-bottom: 0;
+
+  h2 {
+    font-size: .7rem;
+    margin: 0 0 1rem;
+  }
+
+  img {
+    max-height: 2rem;
+    width: 4.5rem;
+  }
+}

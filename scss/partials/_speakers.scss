@@ -1,0 +1,41 @@
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  //		align-content: flex-start;
+}
+
+.speaker {
+  border: .1rem solid $black;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: .5rem;
+  flex-basis: 12rem;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin: 0 1rem 1rem 0;
+  max-width: 25rem;
+  padding: 1rem;
+}
+
+.speaker-photo {
+  display: block;
+  margin: 0 auto 1rem;
+  max-height: 10rem;
+  max-width: 100%;
+}
+
+.talktitle {
+  &:before {
+    content: '\201C';
+  }
+
+  &:after {
+    content: '\201D';
+  }
+}
+
+.contact-info {
+  span {
+    display: block;
+  }
+}
