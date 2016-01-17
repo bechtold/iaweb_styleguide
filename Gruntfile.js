@@ -122,7 +122,7 @@ module.exports = function (grunt) {
             .pipe(gulp.dest(outputPath));
       },
       'styleguide-applystyles': function() {
-        gulp.src('css/uxd.css')
+        gulp.src('css/style.css')
             .pipe(styleguide.applyStyles())
             .pipe(gulp.dest('styleguide'));
       }
