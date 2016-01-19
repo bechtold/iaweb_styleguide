@@ -1,5 +1,8 @@
 # UX Day Graz Styleguide
-This document descripes how to install and use the tools needed to generate the styleguide.
+This document descripes how to install and use the tools needed to generate the style guide.
+The descriptions only contains the options used in this project.
+For deeper understanding of the tool and other options please refer to the according project websites or github pages, links are provided.
+
 ## Index
 - [Quickguide](#quickguide)
 - [Step by Step](#step-by-step-guide-with-explanation)
@@ -8,7 +11,7 @@ This document descripes how to install and use the tools needed to generate the 
 - [Optional changes](#optional-changes)
 - [Grunt Tasks](#grunt-tasks)
 
-## Quickguide
+## Quick Install Guide
 ##### Global
 - [Install Git](https://git-scm.com/downloads) (optional)
 - [Install Ruby](https://www.ruby-lang.org/en/downloads/)
@@ -317,4 +320,5 @@ With the second part of the option the files that should be merged are specified
 ```
 files: {
           'scss/_base.scss': 'scss/base/**/*.scss',
+       }
 ```
