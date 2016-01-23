@@ -32,7 +32,7 @@ module.exports = function (grunt) {
 
     // Grunt-sass
     sass: {
-      app: {
+      dev: {
         // Takes every file that ends with .scss from the scss
         // directory and compile them into the css directory.
         // Also changes the extension from .scss into .css.
@@ -43,12 +43,30 @@ module.exports = function (grunt) {
           src: ['*.scss'],
           dest: 'css',
           ext: '.css'
-        }]
+        }],
+        options: {
+          sourceMap: true,
+          outputStyle: 'expanded',
+          imagePath: "../"
+        }
       },
-      options: {
-        sourceMap: true,
-        outputStyle: 'nested',
-        imagePath: "../",
+      dist: {
+        // Takes every file that ends with .scss from the scss
+        // directory and compile them into the css directory.
+        // Also changes the extension from .scss into .css.
+        // Note: file name that begins with _ are ignored automatically
+        files: [{
+          expand: true,
+          cwd: 'scss',
+          src: ['*.scss'],
+          dest: 'css',
+          ext: '.css'
+        }],
+        options: {
+          sourceMap: false,
+          outputStyle: 'nested',
+          imagePath: "../"
+        }
       }
     },
 
@@ -60,7 +78,7 @@ module.exports = function (grunt) {
         files: ['{,*/}**', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
         //files: ['gruntfile.js']
         // runs the task `sass` whenever any watched file changes
-        tasks: ['concat', 'sass_globbing', 'sass', 'uglify', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
+        tasks: ['sass_globbing', 'sass:dev', 'uglify:dev', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
       },
       options: {
 
@@ -145,26 +163,35 @@ module.exports = function (grunt) {
       }
     },
 
-    concat: {
-      options: {
-        separator: ';'
-      },
-      js: {
-        src: [
-          'js/src/script.js'
-        ],
-        dest: 'js/concat.js'
-      }
-    },
+    //concat: {
+    //  options: {
+    //    separator: ';'
+    //  },
+    //  js: {
+    //    src: [
+    //      'js/src/script.js'
+    //    ],
+    //    dest: 'js/concat.js'
+    //  }
+    //},
 
     uglify: {
-      dist: {
+      dev: {
         options: {
           sourceMap: true,
-          sourceMapName: 'js/sourcemap.map'
+          sourceMapName: 'js/sourcemap.map',
+          beautify: true
         },
         files: {
-          'js/min.js': ['js/concat.js']
+          'js/min.js': ['js/src/script.js']
+        }
+      },
+      dist: {
+        options: {
+          sourceMap: false,
+        },
+        files: {
+          'js/min.js': ['js/src/script.js']
         }
       }
     },
@@ -185,13 +212,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-gulp');
   grunt.loadNpmTasks('grunt-sass-globbing');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  //grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
-  grunt.registerTask('default', ['concat', 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
-  grunt.registerTask('dist', ['concat', 'sass_globbing', 'sass', 'uglify', 'gulp', 'jekyll:dist']);
+  grunt.registerTask('default', ['dev', 'concurrent']);
+  grunt.registerTask('dev', ['sass_globbing', 'sass:dev', 'uglify:dev', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist']);
+  grunt.registerTask('dist', ['sass_globbing', 'sass:dist', 'uglify:dist', 'gulp', 'jekyll:dist']);
   grunt.registerTask('int', ['jshint', 'sasslint']);
 
 };
