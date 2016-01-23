@@ -1,10 +1,2 @@
-/**
- * @file Basic script file.
- * @author Oskar Bechtold
- */
-
-(function() {
-
-  console.log('test');
-
-})();
+!function(){console.log("test")}();
+//# sourceMappingURL=sourcemap.map

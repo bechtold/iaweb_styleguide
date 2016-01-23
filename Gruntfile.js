@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+  'use strict';
   var gulp = require('gulp'),
       styleguide = require('sc5-styleguide');
 
@@ -59,7 +60,7 @@ module.exports = function (grunt) {
         files: ['{,*/}**', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
         //files: ['gruntfile.js']
         // runs the task `sass` whenever any watched file changes
-        tasks: ['concat', 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
+        tasks: ['concat', 'sass_globbing', 'sass', 'uglify', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
       },
       options: {
 
@@ -152,7 +153,19 @@ module.exports = function (grunt) {
         src: [
           'js/src/script.js'
         ],
-        dest: 'js/min.js'
+        dest: 'js/concat.js'
+      }
+    },
+
+    uglify: {
+      dist: {
+        options: {
+          sourceMap: true,
+          sourceMapName: 'js/sourcemap.map'
+        },
+        files: {
+          'js/min.js': ['js/concat.js']
+        }
       }
     }
 
@@ -169,9 +182,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-gulp');
   grunt.loadNpmTasks('grunt-sass-globbing');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default task(s).
   grunt.registerTask('default', ['concat', 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
-  grunt.registerTask('dist', ['sass_globbing', 'sass', 'gulp', 'jekyll:dist']);
+  grunt.registerTask('dist', ['concat', 'sass_globbing', 'sass', 'uglify', 'gulp', 'jekyll:dist']);
 
 };

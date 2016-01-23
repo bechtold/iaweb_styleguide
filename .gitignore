@@ -6,3 +6,4 @@ _site
 .idea
 styleguide
 
+js/sourcemap.map
