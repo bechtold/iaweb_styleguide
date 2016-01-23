@@ -4,7 +4,6 @@
  */
 
 (function() {
-
-  console.log('test');
-
+  'use strict';
+  
 })();

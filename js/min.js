@@ -1,2 +1,2 @@
-!function(){console.log("test")}();
+!function(){"use strict"}();
 //# sourceMappingURL=sourcemap.map

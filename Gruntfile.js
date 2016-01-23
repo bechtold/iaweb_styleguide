@@ -167,6 +167,10 @@ module.exports = function (grunt) {
           'js/min.js': ['js/concat.js']
         }
       }
+    },
+
+    jshint: {
+      all: ['Gruntfile.js', 'js/src/*.js']
     }
 
 
@@ -183,9 +187,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass-globbing');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default task(s).
   grunt.registerTask('default', ['concat', 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
   grunt.registerTask('dist', ['concat', 'sass_globbing', 'sass', 'uglify', 'gulp', 'jekyll:dist']);
+  grunt.registerTask('int', ['jshint', 'sasslint']);
 
 };
