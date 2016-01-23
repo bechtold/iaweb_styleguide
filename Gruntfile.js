@@ -59,7 +59,7 @@ module.exports = function (grunt) {
         files: ['{,*/}**', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
         //files: ['gruntfile.js']
         // runs the task `sass` whenever any watched file changes
-        tasks: ['sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
+        tasks: ['concat', 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
       },
       options: {
 
@@ -142,7 +142,20 @@ module.exports = function (grunt) {
           signature: '// Hello, World!'
         }
       }
+    },
+
+    concat: {
+      options: {
+        separator: ';'
+      },
+      js: {
+        src: [
+          'js/src/script.js'
+        ],
+        dest: 'js/min.js'
+      }
     }
+
 
   });
 
@@ -155,8 +168,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-gulp');
   grunt.loadNpmTasks('grunt-sass-globbing');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
+  grunt.registerTask('default', ['concat', 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent']);
+  grunt.registerTask('dist', ['sass_globbing', 'sass', 'gulp', 'jekyll:dist']);
 
 };
