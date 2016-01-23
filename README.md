@@ -16,8 +16,10 @@ For deeper understanding of the tool and other options please refer to the accor
 
 TODO: Add a link to the presentation about the project and add the survey paper.
 
-#### Note:
+#### .gitignore Note:
 When you clone this project, there is no page in _site and no style guide to view directly, you need to run the grunt task first.
+Also the js/script.js and the css/style.css are ignored as they are generated files.
+If you want to use a continuous integration tool you need to make sure the server either runs grunt or you add the compiled page in _site to the git.  
 
 ## Index
 - [Quick Install Guide](#quickguide)
