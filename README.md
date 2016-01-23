@@ -11,7 +11,7 @@ Credits for the original website: Keith Andrews
 The team building the style guide: Jürgen Minwegen, Cecilia Ritzen, Rayna Nikolova and [Oskar Bechtold](https://twitter.com/bechtoldster)
  
 This document describes how to install and use the tools needed to generate the style guide and the page.
-The descriptions only contains the options used in this project.
+The descriptions only contains the techniques and tools used in this project.
 For deeper understanding of the tool and other options please refer to the according project websites or github pages, links are provided.
 
 TODO: Add a link to the presentation about the project and add the survey paper.
@@ -20,11 +20,11 @@ TODO: Add a link to the presentation about the project and add the survey paper.
 When you clone this project, there is no page in _site and no style guide to view directly, you need to run the grunt task first.
 
 ## Index
-- [Quickguide](#quickguide)
-- [Step by Step](#step-by-step-guide-with-explanation)
-- [Packages installed](#setup-in-the-package.json)
-- [Other things that need to be done](#things-that-need-to-be-considered)
-- [Optional changes](#optional-changes)
+- [Quick Install Guide](#quickguide)
+- [Step by Step Guide](#step-by-step-guide-with-explanation)
+- [Package Setup](#setup-in-the-package.json)
+- [To Take in Consideration](#to-take-in-consideration)
+- [Optional Changes](#optional-changes)
 - [Grunt Tasks](#grunt-tasks)
 
 ## Quick Install Guide
@@ -41,40 +41,41 @@ When you clone this project, there is no page in _site and no style guide to vie
 - run __grunt__
 - open <http://localhost:3000/> in the browser
 
-## Step by Step Guide with explanation
+## Step by Step Guide
 
-In order for this project to work properly a little bit of software has to be installed and set up.
-Within this section step by step instructions will be given in order to get the project running.
+In order for this project to work properly additional software has to be installed and set up.
+In this section step by step instructions with further explanation will be given in order to get the project running.
 
 ### Ruby 2.3
-Ruby is a dynamic and free programming language. It is needed within this project in order to run Jekyll.
-It could also be used to compile the Sass, but in this project libSass has been used. 
-So Jekyll is the only thing that has a requirement to ruby.
-Install the correct Version of Ruby depending on the operating system. [Official Download Webpage](https://www.ruby-lang.org/en/downloads/)
+Ruby is a dynamic and free programming language. It is needed within this project to get Jekyll running.
+Ruby could also be used to compile the Sass but in this project libSass has been used, which means that only Jekyll requires Ruby.
+Install the correct version of Ruby depending on the operating system.
+
+[Official Download Webpage.](https://www.ruby-lang.org/en/downloads/)
 
 ### Bundler 1.11.0
-This is a dependency manager that will be used to make sure that everyone participating in the project is using the same version of each ruby gem. [Documentation](http://bundler.io/)
-Install the current version by typing this into your console. The current working path of the shell does not matter since bundler is going to be installed globally.
+This is a dependency manager that will be used to make sure that everyone participating in the project is using the same version of each Ruby gem. [Documentation](http://bundler.io/)
+Install the current version by typing this into your console. The current working path of the shell does not matter since Bundler is going to be installed globally.
 ```
 gem install bundler
 ```
-With the help of the following command all dependencies of the projects bundle is going to be installed automatically. Each project has it's own bundle that is defined within the 'Gemfile' file. In this case only Jekyll is included.
+With help of the following command all dependencies of the projects bundle is going to be installed automatically. Each project has it's own bundle that is defined within the 'Gemfile' file. In this case only Jekyll is included.
 ```
 bundle install
 ```
 
 ### NodeJS 4.2.1
-NodeJS is a javascript runtime. It uses a non blockiing I/O modell and is event-driven. This also needs to installed globally.
+NodeJS is a JavaScript runtime environment. It uses a non blocking I/O model and is event-driven. This also needs to be installed globally.
 
 [Official Download Webpage](https://nodejs.org/en/download/)
 
 ### Npm
-NodeJS comes with javascripts package manager npm which is needed in order to install all dependencies used based on javascript.
+NodeJS comes with JavaScript's package manager npm which is needed in order to install all dependencies used that are based on JavaScript.
 
 [Official Webpage](https://www.npmjs.com/)
 
 ### Jekyll 3.0.11
-Jekyll is a static site generator which compiles the plain text and transforms it into a nice static html webpage.
+Jekyll is a static site generator which compiles the plain text and transforms it into a static HTML webpage.
 
 [Official Webpage](https://jekyllrb.com/)
 
@@ -90,8 +91,7 @@ Grunt is a task runner based on JavaScript. With this tool it is possible to set
 
 ### "grunt-browser-sync": "^2.2.0"
 The built-in serve function provided by Jekyll is not used by default in this project in order to run the development server.
-For this task browser sync is used. It provides a lot more functionality like automatically refreshing the browser tab and synchronising input from multiple browsers.
-(On installation there might be errors of an optional dependency on windows machines. They can be ignored, it does work without.)
+Instead, Browsersync is used because it provides a lot more functionality like automatically refreshing the browser tab and synchronising input from multiple browsers (on installation there might be errors due to an optional dependency on Windows machines. They can be ignored, it does work without). However, in the section [Hosting the site with Jekyll or with Browsersync](#hosting-the-site-with-jekyll-or-with-browsersync) a description of how to change to Jekyll's serve function is to be found.
  
 [GitHub](https://github.com/BrowserSync/grunt-browser-sync)
 
@@ -102,20 +102,20 @@ With concurrent it is possible to run multiple grunt tasks concurrently.
 [GitHub](https://github.com/sindresorhus/grunt-concurrent)
 
 ### "grunt-contrib-watch": "^0.6.1"
-Contrib watch is keeping a close look at the projects files and runs predefined tasks whenever one of the files changes.
+Contrib watch is keeping a close look at the project's files and runs predefined tasks whenever one of the files changes.
 This makes it possible to establish a workflow and removes the necessity to manually run tasks or reload the browser at any time.
 
 [GitHub](https://github.com/gruntjs/grunt-contrib-watch)
 
 ### "grunt-gulp": "^0.1.0"
-Gulp is another task runner. It is needed to generate the SC5 styleguide. SC5 only provides gulp tasks. This package allows to run gulp tasks as grunt tasks.
+Gulp is another task runner. It is needed to generate the SC5 style guide. SC5 only provides gulp tasks. This package allows to run gulp tasks as grunt tasks.
 
 [GitHub](https://github.com/gratimax/gulp-grunt)
 
 [Official Gulp Webpage](http://gulpjs.com/) 
 
 ### "grunt-jekyll": "^0.4.3"
-The jekyll module provides the possibility to compile the jekyll based site with a grunt task.
+The jekyll module provides the possibility to compile the Jekyll-based site with a grunt task.
 
 [GitHub](https://github.com/dannygarcia/grunt-jekyll)
 
@@ -125,7 +125,7 @@ Grunt sass compiles the sass to css using libSass.
 [GitHub](https://github.com/sindresorhus/grunt-sass)
 
 ### "grunt-sass-lint": "0.1.0-beta.4"
-Sass Lint is a static code analyzer. It is used to improve the quality of the Scss and makes sure the sass files follow some coding styles.
+Sass Lint is a static code analyzer. It is used to improve the quality of the Scss and to make sure the Sass files follow same coding styles.
 
 [GitHub](https://github.com/sasstools/grunt-sass-lint)
 
@@ -134,10 +134,10 @@ This makes it possible to load multiple grunt tasks by using globbing patterns.
 It could replace all __grunt.loadNpmTasks('xxx');__ with __require('load-grunt-tasks')(grunt);__
 It has not been used in this project to keep a better overview of the loaded grunt tasks.
 
-[GitHub](https://github.com/sindresorhus/load-grunt-tasks	)
+[GitHub](https://github.com/sindresorhus/load-grunt-tasks)
 
 ### "sc5-styleguide": "^0.3.41"
-SC5 is responsible for extracting the comments from the sass files and converting them into a nice and clean styleguide.
+SC5 is responsible for extracting the comments from the sass files and converting them into a nice and clean style guide.
 
 [GitHub](https://github.com/SC5/sc5-styleguide)
 
@@ -151,10 +151,10 @@ So when a file is added to a folder it doesn't need to be included in the projec
 
 
 
-## Things that need to be considered
-If more than one operating system is going to be used there is the necessity to add a .gitattributes files declaring line endings.
-Otherwise git messes with line endings and the scss linter will not work correctly.
-In order to fix it a .gitattributes file within the root folder of the git is created. It has the following content:
+## To Take in Consideration
+If more than one operating system is going to be used it is necessary to add a .gitattributes files that declares line endings.
+Otherwise Git can not work with line endings correctly and the Scss Linter will not work correctly.
+In order to fix this a .gitattributes file within the root folder of the Git is created. The file has the following content:
 ```
 # Declare files that will always have CRLF line endings on checkout.
 *.scss eol=lf
@@ -169,7 +169,7 @@ In order to fix it a .gitattributes file within the root folder of the git is cr
 ### sass-lint-yml
 In this file all options for the linting of the sass file are defined.
 For this project a simple but very strict config is used.
-This improves reusability of the css components.
+This improves reusability of the CSS components.
 ```
 #########################
 ## Sample Sass Lint File
@@ -194,15 +194,15 @@ rules:
     -
       size: 2
 ```
-With the formatter:stylish option the output of the linter is printed to the console.
-Set it to html to create an html file with the report.
-Within ignore all the scss files which should be ingored by the linting process are listed.
+With the 'formatter: stylish' the output of the linter is printed to the console.
+Set it to HTML to create an HTML file with the report.
+Within 'ignore' all the SCSS files which should be ingored by the linting process are listed.
 Indentation specifies the number of spaces used.
 Other options include for example nesting depth or name formats.
 All possible options can be seen in the [default configuration](https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml).
 
 The target location for the linter is specified in the grunt task in the 'Gruntfile.js' file.
-To change the destination the value for target needs to be changed accordingly within the sasslint task.
+To change the destination the value for target needs to be changed according with the sasslint task.
 
 ```
 // lint the sass files
@@ -220,28 +220,29 @@ To change the destination the value for target needs to be changed accordingly w
 
 
 ### _config.yml
-Jekylls configuration is done within the _config.yml file. Within this file there isn't much to be changed.
-With the 'exclude' option it is possible to add folders which should not be compiled by jekyll.
-The two folders scss and node_modules were are added in oder to increase the compiling speed and also because those files are not needed on the live site.
+Jekylls configuration is done within the _config.yml file. Within this file there isn't much that needs to be changed.
+With the 'exclude' option it is possible to add folders which should not be compiled by Jekyll.
+The two folders scss and node_modules are added in oder to increase the compiling speed and also because those files are not needed on the live site.
 
-If the styleguide shouldn't be deployed either, a second commented out `exlude line` has been added within this file that can be switched with the current one.
-This insures that the styleguide folder isn't complied into the _site folder.
+If the style guide shouldn't be deployed either, an additional `exclude line` is available to switch with the current one.
+This additional 'exlude line' insures that the style guide folder isn't compiled into the _site folder.
 
 ```
 # exclude: ['bac', '*/bac', 'scss', 'node_modules', 'styleguide']
 exclude: ['bac', '*/bac', 'scss', 'node_modules']
 ```
 
-### Hosting the site with Jekyll or with browser-sync
+### Hosting the site with Jekyll or with Browsersync
 
-With the default setup the webpage is hosted at localhost by running browser sync.
-This package has a lot of little features which are pretty handy regarding the workflow, like automatically refreshing the webpage and also giving the option to synchronize multiple browsers running at different devices.
+With the default setup the webpage is hosted at localhost by running Browsersync.
+This package has a lot of features which are handy regarding the workflow, like automatically refreshing the webpage and also giving the option to synchronize multiple browsers running at different devices.
 
 In order to switch to Jekyll's serve functions a few changes need to be made.
-All instruction can be found in the 'Gruntfile.js' file within the 'gulp' task.
+All instructions can be found in the 'Gruntfile.js' file within the 'gulp' task.
 It is also possible to change the port number to a desired value.
-This is an example how it should look like with Jekyll's server hosting enabled.
-The Webpage can be located at <http://localhost:2000/>.
+
+This is an example of how it should look like with Jekyll's server hosting enabled.
+The webpage can be located at <http://localhost:2000/>.
 
 ```
 gulp: {
@@ -283,7 +284,7 @@ concurrent: {
 
 
 ## Grunt Tasks
-Within this the 'Gruntfile.js' all the task which are executable with grunt are being initialized and set up.
+Within the 'Gruntfile.js' all the task which are executable with Grunt are being initialized and set up.
 This section describes all grunt tasks in detail.
 A grunt task is run from the console by typing __grunt taskname__ but a default task is implemented so only __grunt__ needs to be typed.
 The default task 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent'.
@@ -326,11 +327,11 @@ Also the base directory for the final webpage is specified with the 'baseDir' op
 With this task the style guide is being generated.
 With the 'title' option the name that can be seen in the tab of a browser can be changed.
 With the variable 'outputPath' the name of the folder that will be created within the root folder can be changed.
-For instruction on changing the server hosting please refer to the section [Hosting the site with Jekyll or with browser-sync](#hosting-the-site-with-jekyll-or-with-browser-sync) in this documentation.
+For instruction on changing the server hosting please refer to the section [Hosting the site with Jekyll or with Browsersync](#hosting-the-site-with-jekyll-or-with-browsersync) in this documentation.
 
 ### sass_globbing
 
-This ask handles the the migration of the different scss files into a single one.
+This task handles the migration of the different SCSS files into a single one.
 The first part of the 'files' option defines the name of the finished scss file.
 With the second part of the option the files that should be merged are specified.
 ```
