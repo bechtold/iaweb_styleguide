@@ -64,7 +64,7 @@ module.exports = function (grunt) {
         }],
         options: {
           sourceMap: false,
-          outputStyle: 'nested',
+          outputStyle: 'compressed',
           imagePath: "../"
         }
       }
@@ -163,6 +163,7 @@ module.exports = function (grunt) {
       }
     },
 
+    // Not needed for now as it seems uglify does a better job.
     //concat: {
     //  options: {
     //    separator: ';'
