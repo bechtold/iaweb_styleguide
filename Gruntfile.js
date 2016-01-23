@@ -184,7 +184,7 @@ module.exports = function (grunt) {
           beautify: true
         },
         files: {
-          'js/min.js': ['js/src/script.js']
+          'js/script.js': ['js/src/script.js']
         }
       },
       dist: {
@@ -192,7 +192,7 @@ module.exports = function (grunt) {
           sourceMap: false,
         },
         files: {
-          'js/min.js': ['js/src/script.js']
+          'js/script.js': ['js/src/script.js']
         }
       }
     },
