@@ -5,5 +5,5 @@
 
 (function() {
   'use strict';
-  
+
 })();
