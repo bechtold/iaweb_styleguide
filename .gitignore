@@ -2,8 +2,14 @@ node_modules
 _site
 *~
 .DS_Store
-*.css.map
 .idea
 styleguide
 
-js/sourcemap.map
+# ignoring compiled files
+_site
+styleguide
+css/style.css
+js/script.js
+
+# ignoring sourcemaps
+*.map
