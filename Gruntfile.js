@@ -198,8 +198,12 @@ module.exports = function (grunt) {
 
     jshint: {
       all: ['Gruntfile.js', 'js/src/*.js']
-    }
+    },
 
+    clean: {
+      js: ["js/*", "!js/src"],
+      css: ["css/*", "!css/bac"]
+    }
 
   });
 
@@ -215,11 +219,12 @@ module.exports = function (grunt) {
   //grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   // Default task(s).
   grunt.registerTask('default', ['dev', 'concurrent']);
   grunt.registerTask('dev', ['sass_globbing', 'sass:dev', 'uglify:dev', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist']);
-  grunt.registerTask('dist', ['sass_globbing', 'sass:dist', 'uglify:dist', 'gulp', 'jekyll:dist']);
+  grunt.registerTask('dist', ['clean', 'sass_globbing', 'sass:dist', 'uglify:dist', 'gulp', 'jekyll:dist']);
   grunt.registerTask('int', ['jshint', 'sasslint']);
 
 };
