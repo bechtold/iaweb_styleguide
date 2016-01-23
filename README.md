@@ -1,7 +1,23 @@
-# UX Day Graz Styleguide
-This document descripes how to install and use the tools needed to generate the style guide.
+# Building a Web Site and its Frontend Living Web Style Guide using Grunt, Jekyll, and SC5
+
+## UX Day Graz Style Guide
+In this project a style guide for the website has been created.
+The website was provided by Keith Andrews as a starting point to build the style guide. 
+It has not been modified a lot from the original site, only improvements needed to decrease CSS specificity have been applied.
+You can view the original page at [https://uxdaygraz2015.iicm.tugraz.at/](https://uxdaygraz2015.iicm.tugraz.at/).
+
+Credits for the original website: Keith Andrews
+
+The team building the style guide: Jürgen Minwegen, Cecilia Ritzen, Rayna Nikolova and [Oskar Bechtold](https://twitter.com/bechtoldster)
+ 
+This document describes how to install and use the tools needed to generate the style guide and the page.
 The descriptions only contains the options used in this project.
 For deeper understanding of the tool and other options please refer to the according project websites or github pages, links are provided.
+
+TODO: Add a link to the presentation about the project and add the survey paper.
+
+#### Note:
+When you clone this project, there is no page in _site and no style guide to view directly, you need to run the grunt task first.
 
 ## Index
 - [Quickguide](#quickguide)
