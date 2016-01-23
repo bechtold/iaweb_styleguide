@@ -1,1 +1,4 @@
-!function(){"use strict"}();
+!function() {
+    "use strict";
+}();
+//# sourceMappingURL=sourcemap.map

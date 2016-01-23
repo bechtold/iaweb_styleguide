@@ -77,8 +77,8 @@ module.exports = function (grunt) {
         // If you want to watch all scss files instead, use the "**/*" globbing pattern
         files: ['{,*/}**', '!node_modules/**', '!_site/**', '!css/**', '!styleguide/**'],
         //files: ['gruntfile.js']
-        // runs the task `sass` whenever any watched file changes
-        tasks: ['sass_globbing', 'sass:dev', 'uglify:dev', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'],
+        // runs the task `dev` whenever any watched file changes
+        tasks: ['dev'],
       },
       options: {
 
