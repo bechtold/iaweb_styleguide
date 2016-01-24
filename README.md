@@ -1,25 +1,21 @@
-# Building a Web Site and its Frontend Living Web Style Guide using Grunt, Jekyll, and SC5
+# Building a Website and its Frontend Living Style Guide using Grunt, Jekyll and SC5
 
 ## UX Day Graz Style Guide
-In this project a style guide for the website has been created.
+In this project a style guide for the website UX Day Graz has been implemented with SC5.
 The website was provided by Keith Andrews as a starting point to build the style guide. 
 It has not been modified a lot from the original site, only improvements needed to decrease CSS specificity have been applied.
 You can view the original page at [https://uxdaygraz2015.iicm.tugraz.at/](https://uxdaygraz2015.iicm.tugraz.at/).
 
 Credits for the original website: Keith Andrews
 
-The team building the style guide: Jürgen Minwegen, Cecilia Ritzen, Rayna Nikolova and [Oskar Bechtold](https://twitter.com/bechtoldster)
+The team implementing the style guide: Jürgen Minwegen, Cecilia Ritzén, Rayna Nikolova and [Oskar Bechtold](https://twitter.com/bechtoldster)
  
 This document describes how to install and use the tools needed to generate the style guide and the page.
-The descriptions only contains the techniques and tools used in this project.
-For deeper understanding of the tool and other options please refer to the according project websites or github pages, links are provided.
+The descriptions only contain the techniques and tools used in this project.
+For deeper understanding of the tools and other options please see the corresponding project websites or GitHub pages. Links are provided in the text.
 
 TODO: Add a link to the presentation about the project and add the survey paper.
-
-#### .gitignore Note:
-When you clone this project, there is no page in _site and no style guide to view directly, you need to run the grunt task first.
-Also the js/script.js and the css/style.css are ignored as they are generated files.
-If you want to use a continuous integration tool you need to make sure the server either runs grunt or you add the compiled page in _site to the git.  
+  
 
 ## Index
 - [Quick Install Guide](#quickguide)
@@ -42,6 +38,12 @@ If you want to use a continuous integration tool you need to make sure the serve
 - run __npm install__
 - run __grunt__
 - open <http://localhost:3000/> in the browser
+
+#### .gitignore Note:
+When you clone this project, there is no page in _site and no style guide to view directly, you need to run the grunt task first.
+Also the js/script.js and the css/style.css are ignored as they are generated files.
+If you want to use a continuous integration tool you need to make sure the server either runs grunt or you add the compiled page in _site to the git.
+
 
 ## Step by Step Guide
 
@@ -103,6 +105,21 @@ With concurrent it is possible to run multiple grunt tasks concurrently.
 
 [GitHub](https://github.com/sindresorhus/grunt-concurrent)
 
+### "grunt-contrib-clean": "^0.7.0"
+Cleans all JavaScript and CSS files in the folders js and css, except the files in corresponding src folders. This is used when work in development mode is done and ready to be published.
+
+[GitHub](https://github.com/gruntjs/grunt-contrib-clean)
+
+### "grunt-contrib-jshint": "^0.12.0"
+JSHint is used for validating the files.
+
+[GitHub](https://github.com/gruntjs/grunt-contrib-jshint)
+
+### "grunt-contrib-uglify": "^0.11.0"
+The uglify task helps switching the code from minimized mode and beautifies it, and vice versa. This is used when working in development mode. 
+
+[GitHub](https://github.com/gruntjs/grunt-contrib-uglify)
+
 ### "grunt-contrib-watch": "^0.6.1"
 Contrib watch is keeping a close look at the project's files and runs predefined tasks whenever one of the files changes.
 This makes it possible to establish a workflow and removes the necessity to manually run tasks or reload the browser at any time.
@@ -122,7 +139,7 @@ The jekyll module provides the possibility to compile the Jekyll-based site with
 [GitHub](https://github.com/dannygarcia/grunt-jekyll)
 
 ### "grunt-sass": "^1.1.0"
-Grunt sass compiles the sass to css using libSass.
+Grunt SASS compiles the SASS to CSS using libSass.
 
 [GitHub](https://github.com/sindresorhus/grunt-sass)
 
@@ -269,7 +286,7 @@ gulp: {
     },
 
 ```
-Also the concurrent task needs to changed. Comment out the 'browserSync' task and uncomment the 'jekyll:serve' task.
+Also the concurrent task needs to be changed. Comment out the 'browserSync' task and uncomment the 'jekyll:serve' task.
 
 ```
 concurrent: {
@@ -286,21 +303,32 @@ concurrent: {
 
 
 ## Grunt Tasks
-Within the 'Gruntfile.js' all the task which are executable with Grunt are being initialized and set up.
-This section describes all grunt tasks in detail.
-A grunt task is run from the console by typing __grunt taskname__ but a default task is implemented so only __grunt__ needs to be typed.
-The default task 'sass_globbing', 'sass', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist', 'concurrent'.
-The only task that needs to be run separately is the lint task by typing __grunt sasslint__.
+Within the 'Gruntfile.js' all the tasks which are executable with Grunt are being initialized and set up. A grunt task is run from the console by typing __grunt taskname__ but a default task is implemented so only __grunt__ needs to be typed. The dev tasks are used for development and when the work is ready to be published the distribution task needs to be run once. There are no JavaScript files used for the style guide in this project, however we have added tasks to manage with concatenation and minifying of those as well in case of future needs.
+
+#### grunt
+This is the default task and it contains 'dev' for development mode and 'concurrent' to run several grunt tasks concurrently.
+
+#### grunt dev
+The development task generates the style guide, beautifies the CSS and JavaScript files and adds sourcemaps (references between sources and compiled files that are used in the browser). It contains the following tasks: 'sass_globbing', 'sass:dev', 'uglify:dev', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist'.
+
+#### grunt dist
+The distribution task removes the development files within the CSS and JavaScript folder, except the src and bac folders, and recompiles everything with uglification. It contains the following tasks: 'clean', 'sass_globbing', 'sass:dist', 'uglify:dist', 'gulp', 'jekyll:dist'.
+
+#### grunt int
+This task validates and lints the Gruntfile, the source files in the JavaScript folder and the SASS files.
 
 
-### jekyll
+### Grunt Tasks in Detail
+This section describes what the grunt tasks consist of in detail.
+
+#### jekyll
 This task compiles the site with Jekyll.
 The `bundleExec` option is needed to run Jekyll from the locally installed bundle.
 There are two sub-tasks, dist and serve. Dist only compiles the site and serve also starts Jekyll's built-in server.
 
 
 
-### sass
+#### sass
 Takes all files that ends with '.scss' from the scss directory and compiles them into the css directory.
 With the 'cwd' option the current working directory can be changed.
 With the 'src' option specific files can be chosen.
@@ -309,29 +337,38 @@ With 'the 'ext' option the extension of the compiled file is specified.
 Note that files starting with underscore are ignored, they are sass partials and are supposed to be included from other sass files.
 So in this project only the style.scss is compiled, it imports all other partial files. 
 
-### watch
+#### watch
 This watches all the folders within the directory for changes.
 The wanted files can be defined with the 'files' option. We are watching all folders except for the ones defined with a callsign.
 With the 'tasks' option it is possible to define the tasks that should be run after a change is detected.
 
 
-### concurrent
+#### concurrent
 Currently the only tasks which are running at the same time are the 'watch' and the 'browserSync' tasks. Those tasks can be specified with the 'serve' option.
 
-### sasslint
+#### clean
+Clears all the files from the JavaScript and CSS folders, except the sourcefiles. Is used when switching from development to distribution mode.
+
+#### jshint
+Validates files in the JavaScript source folder and the Gruntfile itself.
+
+#### uglify
+Helps switch between minified and beautified code mode when working with development versus publishing tasks.
+
+#### sasslint
 Within this task the location of the configuration file is specified with the 'configFile' option and the scss files which should be linted are specified with the 'target' option.
 
-### browser-sync
+#### browser-sync
 With the 'src' option the css files which are going to be injected automatically on change are defined.
 Also the base directory for the final webpage is specified with the 'baseDir' option
 
-### gulp
+#### gulp
 With this task the style guide is being generated.
 With the 'title' option the name that can be seen in the tab of a browser can be changed.
 With the variable 'outputPath' the name of the folder that will be created within the root folder can be changed.
 For instruction on changing the server hosting please refer to the section [Hosting the site with Jekyll or with Browsersync](#hosting-the-site-with-jekyll-or-with-browsersync) in this documentation.
 
-### sass_globbing
+#### sass_globbing
 
 This task handles the migration of the different SCSS files into a single one.
 The first part of the 'files' option defines the name of the finished scss file.
