@@ -111,12 +111,12 @@ Cleans all JavaScript and CSS files in the folders js and css, except the files 
 [GitHub](https://github.com/gruntjs/grunt-contrib-clean)
 
 ### "grunt-contrib-jshint": "^0.12.0"
-JSHint is used for validating the files.
+JSHint is used for static code analysis of JavaScript files.
 
 [GitHub](https://github.com/gruntjs/grunt-contrib-jshint)
 
 ### "grunt-contrib-uglify": "^0.11.0"
-The uglify task helps switching the code from minimized mode and beautifies it, and vice versa. This is used when working in development mode. 
+Uglify is used to minify files, it can also beautify files. This is used to prepare files for distribution. 
 
 [GitHub](https://github.com/gruntjs/grunt-contrib-uglify)
 
@@ -305,6 +305,8 @@ concurrent: {
 ## Grunt Tasks
 Within the 'Gruntfile.js' all the tasks which are executable with Grunt are being initialized and set up. A grunt task is run from the console by typing __grunt taskname__ but a default task is implemented so only __grunt__ needs to be typed. The dev tasks are used for development and when the work is ready to be published the distribution task needs to be run once. There are no JavaScript files used for the style guide in this project, however we have added tasks to manage with concatenation and minifying of those as well in case of future needs.
 
+### Custom Tasks for this Project
+
 #### grunt
 This is the default task and it contains 'dev' for development mode and 'concurrent' to run several grunt tasks concurrently.
 
@@ -319,7 +321,7 @@ This task validates and lints the Gruntfile, the source files in the JavaScript 
 
 
 ### Grunt Tasks in Detail
-This section describes what the grunt tasks consist of in detail.
+This section describes the grunt tasks provided by the open source community in detail.
 
 #### jekyll
 This task compiles the site with Jekyll.
@@ -350,10 +352,10 @@ Currently the only tasks which are running at the same time are the 'watch' and 
 Clears all the files from the JavaScript and CSS folders, except the sourcefiles. Is used when switching from development to distribution mode.
 
 #### jshint
-Validates files in the JavaScript source folder and the Gruntfile itself.
+Validates files in the JavaScript source folder and the Gruntfile.
 
 #### uglify
-Helps switch between minified and beautified code mode when working with development versus publishing tasks.
+Minifies and concatenates files for distribution. Also beautifies code when working in development.
 
 #### sasslint
 Within this task the location of the configuration file is specified with the 'configFile' option and the scss files which should be linted are specified with the 'target' option.
