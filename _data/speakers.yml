@@ -1,109 +1,54 @@
-- firstname: Eric
-  surname: Eggert
-  affiliation: W3C Web Accessibility Initiative
-  email: ee@w3.org
-  web:  http://yatil.net/
-  twitter: yatil
-  photo: /images/eric.jpg
-  talktitle: How to Improve Your Website’s Accessibility Without Going Crazy
+- firstname: Max
+  surname: Mustermann
+  affiliation: Very special title
+  email: mail@example.com
+  web:  http://example.com/
+  twitter: example
+  photo: /images/girl.jpg
+  talktitle: Talk Title
   abstract: |
     <p>
-    In this talk, Eric will show how to improve the user experience
-    of websites, especially for people with disabilities. He will also
-    introduce the various W3C resources that help getting started with
-    accessibility, implementing them and describe why it makes sense for
-    everyone to let everyone have a good experience.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus.
     </p>
   biography: |
     <p>
-    Eric Eggert is currently working for W3C’s Web Accessibility
-    Initiative. He first got into contact with accessibility while
-    promoting standards-based web design in the early 2000s. In 2006, he
-    moved to Vienna, Austria where he continued to work freelance and also
-    got in touch with the accessibility community there. In 2011 he also
-    co-founded the small 2-person web design and consulting studio
-    “outline” in Essen, Germany.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus.
     </p>
 
 
-- firstname: Philipp
-  surname: Sackl
-  affiliation: Lead Designer Firefox, Mozilla
-  email: 
-  web:  http://philippsackl.com/
-  twitter: phlsa
-  photo: /images/philipp.jpg
-  talktitle: A Designer’s Guide to Empathy
+- firstname: Max
+  surname: Mustermann
+  affiliation: Very special title
+  email: mail@example.com
+  web:  http://example.com/
+  twitter: example
+  photo: /images/girl.jpg
+  talktitle: Talk Title
   abstract: |
     <p>
-    We spend more time in our browsers than in bed and more
-    time with our smartphones than with our families. Computing and
-    digital user interfaces are now woven into the fabric of everyday life.
-    As designers, we are no longer just tampering with people's productivity,
-    we are handling the worlds most precious resource: attention.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus.
     </p>
-    <p>
-    This talk examines the challenges of building empathy with a global
-    audience. It takes a critical look at how design decisions shape our
-    everyday lives and at our role as mediators between the interests of
-    users and businesses.
-    </p>
-
   biography: |
     <p>
-    Philipp is the lead designer of Firefox at Mozilla. That means he
-    spend a lot of time thinking about browsers so that you don’t have
-    to. Prior to that, he’s been a co-founder of the design agency envis
-    precisely and an interaction designer at BMW. He enjoys good food,
-    good beer and bad jokes.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus.
     </p>
 
 
-- firstname: Tobias
-  surname: Schreck
-  affiliation: Professor, Graz University of Technology
-  email: tobias.schreck@cgv.tugraz.at
-  web:  http://cgv.tugraz.at/schreck
-  twitter: 
-  photo: /images/tobias.jpg
-  talktitle: Visual Search and Analysis
+- firstname: Max
+  surname: Mustermann
+  affiliation: Very special title
+  email: mail@example.com
+  web:  http://example.com/
+  twitter: example
+  photo: /images/girl.jpg
+  talktitle: Talk Title
   abstract: |
     <p>
-    In this talk, I will discuss selected approaches for visual search
-    and analysis in large textual and non-textual document
-    collections. First, recent techniques for visual analysis of
-    sentiment and opinion properties in large amounts of textual
-    documents, including promising application possibilities, will be
-    discussed. Then, I will focus on visual support for information
-    retrieval in non-textual documents, in particular multimedia and
-    time-oriented research data. I argue that new visual-interactive
-    approaches can provide for effective user access to large document
-    corpora, including discovering of interesting relationships
-    between data items. I will conclude with some research
-    opportunities at the intersection of visualization, information
-    retrieval, and evaluation.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus.
     </p>
-
   biography: |
     <p>
-    Tobias Schreck is a Professor at the Institute for Computer
-    Graphics and Knowledge Visualization at Graz University of
-    Technology, Austria. Between 2011 and 2015, he was an Assistant
-    Professor with the Data Analysis and Visualization Group at the
-    University of Konstanz, Germany. Between 2007 and 2011 he was a
-    Postdoc researcher and head of a junior research group on Visual
-    Search and Analysis with Technische Universität Darmstadt,
-    Germany. He obtained a PhD in Computer Science in 2006, and a
-    Master of Science degree in Information Engineering in 2002, both
-    from the University of Konstanz.
-    </p>
-    <p>
-    Tobias Schreck works in the areas of Visual Analytics, 3D Object
-    Retrieval, and Digital Libraries. His research interests include
-    visual search and analysis in time-oriented, high-dimensional and
-    3D object data, with applications in data analysis, multimedia
-    retrieval and cultural heritage. A full research profile can be
-    found at <a href="http://cgv.tugraz.at/schreck">http://cgv.tugraz.at/schreck</a>.
+    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus.
     </p>
 
 
