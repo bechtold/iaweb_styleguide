@@ -225,7 +225,7 @@ module.exports = function (grunt) {
   // Default task(s).
   grunt.registerTask('default', ['dev', 'concurrent']);
   grunt.registerTask('dev', ['sass_globbing', 'sass:dev', 'uglify:dev', 'gulp:styleguide-generate', 'gulp:styleguide-applystyles', 'jekyll:dist']);
-  grunt.registerTask('dist', ['clean', 'sass_globbing', 'sass:dist', 'uglify:dist', 'gulp', 'jekyll:dist']);
+  grunt.registerTask('dist', ['clean', 'sass_globbing', 'sass:dist', 'uglify:dist', 'gulp', 'jekyll:dist', 'int']);
   grunt.registerTask('int', ['jshint', 'sasslint']);
 
 };
