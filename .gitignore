@@ -1,9 +1,8 @@
+# ignoring development and temp files
 node_modules
-_site
 *~
 .DS_Store
 .idea
-styleguide
 
 # ignoring compiled files
 _site
