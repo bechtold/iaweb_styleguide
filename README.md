@@ -1,4 +1,4 @@
-# Building a Website and its Frontend Living Style Guide using Grunt, Jekyll and SC5
+# Building a Website and its Frontend Living Web Style Guide using Grunt, Jekyll and SC5
 
 ## UX Day Graz Style Guide
 In this project a style guide for the website UX Day Graz has been implemented with SC5.
