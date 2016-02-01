@@ -44,6 +44,9 @@ When you clone this project, there is no page in _site and no style guide to vie
 Also the js/script.js and the css/style.css are ignored as they are generated files.
 If you want to use a continuous integration tool you need to make sure the server either runs grunt or you add the compiled page in _site to the git.
 
+### Caching Notes
+No efforts have been made to implement caching or other performance optimizations, since this was not part of the projects requirements. Not even a .htaccess file has been created. If you want to implement some caching techniques please refer to
+[varvy](https://varvy.com/pagespeed/) for some best practice tips.
 
 ## Step by Step Guide
 
